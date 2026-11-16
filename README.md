@@ -101,6 +101,10 @@ cargo build --release          # builds CLI `ntokenizer` and library
 cargo test --release           # 136 tests (build from this tree first)
 ```
 
+CI note: a GitHub Actions workflow was prepared locally (build + release tests)
+but this project's current credentials lack the `workflow` OAuth scope required to
+create it, so CI is not enabled yet. The exact commands to run locally are shown above.
+
 ### From Hugging Face (model + Python)
 
 ```bash
