@@ -1,0 +1,20 @@
+{
+  "seed": 42,
+  "entries": [
+    {
+      "path": "data/corpus_en.txt",
+      "weight": 1.0,
+      "language": "en",
+      "domain": "general",
+      "text_field": null
+    },
+    {
+      "path": "data/corpus_tr.jsonl",
+      "weight": 1.5,
+      "language": "tr",
+      "domain": "news",
+      "text_field": "text"
+    }
+  ]
+}
+

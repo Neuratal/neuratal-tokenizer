@@ -1,0 +1,416 @@
+{
+ "profile": "final",
+ "train_root": "data/v0.2/clean/train",
+ "total_files": 10555,
+ "total_bytes": 1963480352,
+ "total_mb": 1963.48,
+ "by_bucket": {
+  "arabic": {
+   "files": 131,
+   "bytes": 293654719,
+   "mb": 293.655,
+   "domains": {
+    "arwikisource": 293264309,
+    "tatoeba_ara": 390410
+   }
+  },
+  "chinese": {
+   "files": 323,
+   "bytes": 130301425,
+   "mb": 130.301,
+   "domains": {
+    "gutenberg_cjk_zh": 115340844,
+    "tatoeba_cmn": 271903,
+    "zhwiktionary": 14688678
+   }
+  },
+  "english": {
+   "files": 144,
+   "bytes": 218952183,
+   "mb": 218.952,
+   "domains": {
+    "enwikibooks": 46610704,
+    "enwikinews": 20891241,
+    "gutenberg_en": 47142381,
+    "simplewiki": 104307857
+   }
+  },
+  "hindi": {
+   "files": 110,
+   "bytes": 230566107,
+   "mb": 230.566,
+   "domains": {
+    "hiwiki": 229925242,
+    "tatoeba_hin": 640865
+   }
+  },
+  "japanese": {
+   "files": 81,
+   "bytes": 135093226,
+   "mb": 135.093,
+   "domains": {
+    "gutenberg_cjk_ja": 6652286,
+    "jawikisource": 113600651,
+    "jawiktionary": 14340390,
+    "tatoeba_jpn": 499899
+   }
+  },
+  "korean": {
+   "files": 90,
+   "bytes": 187270196,
+   "mb": 187.27,
+   "domains": {
+    "kowikisource": 177888089,
+    "kowiktionary": 9062580,
+    "tatoeba_kor": 319527
+   }
+  },
+  "other_languages": {
+   "files": 9,
+   "bytes": 3636114,
+   "mb": 3.636,
+   "domains": {
+    "tatoeba_ben": 717924,
+    "tatoeba_deu": 320669,
+    "tatoeba_ell": 446096,
+    "tatoeba_fra": 352701,
+    "tatoeba_heb": 364726,
+    "tatoeba_rus": 550233,
+    "tatoeba_tam": 49074,
+    "tatoeba_tha": 434219,
+    "tatoeba_vie": 400472
+   }
+  },
+  "programming": {
+   "files": 7098,
+   "bytes": 140651297,
+   "mb": 140.651,
+   "domains": {
+    "cpython_code": 45765288,
+    "cpython_docs": 17193268,
+    "go_src": 30376515,
+    "rust_src": 15593730,
+    "typescript_src": 31722496
+   }
+  },
+  "spanish": {
+   "files": 70,
+   "bytes": 147083820,
+   "mb": 147.084,
+   "domains": {
+    "eswikisource": 146786977,
+    "tatoeba_spa": 296843
+   }
+  },
+  "stem": {
+   "files": 2361,
+   "bytes": 189081040,
+   "mb": 189.081,
+   "domains": {
+    "arxiv": 125829114,
+    "gutenberg_science": 28705513,
+    "gutenberg_science2": 34546413
+   }
+  },
+  "turkish": {
+   "files": 138,
+   "bytes": 287190225,
+   "mb": 287.19,
+   "domains": {
+    "tatoeba_tur": 299988,
+    "trwiki": 230607258,
+    "trwikisource": 46979812,
+    "trwiktionary": 9303167
+   }
+  }
+ },
+ "by_domain": {
+  "arwikisource": {
+   "bucket": "arabic",
+   "files": 130,
+   "bytes": 293264309,
+   "available_files": 412,
+   "available_bytes": 935153649
+  },
+  "arxiv": {
+   "bucket": "stem",
+   "files": 2177,
+   "bytes": 125829114,
+   "available_files": 2673,
+   "available_bytes": 175775285
+  },
+  "cpython_code": {
+   "bucket": "programming",
+   "files": 2275,
+   "bytes": 45765288,
+   "available_files": 2275,
+   "available_bytes": 45765288
+  },
+  "cpython_docs": {
+   "bucket": "programming",
+   "files": 601,
+   "bytes": 17193268,
+   "available_files": 601,
+   "available_bytes": 17193268
+  },
+  "enwikibooks": {
+   "bucket": "english",
+   "files": 23,
+   "bytes": 46610704,
+   "available_files": 199,
+   "available_bytes": 419474098
+  },
+  "enwikinews": {
+   "bucket": "english",
+   "files": 10,
+   "bytes": 20891241,
+   "available_files": 22,
+   "available_bytes": 45059811
+  },
+  "eswikisource": {
+   "bucket": "spanish",
+   "files": 69,
+   "bytes": 146786977,
+   "available_files": 164,
+   "available_bytes": 348514489
+  },
+  "go_src": {
+   "bucket": "programming",
+   "files": 2117,
+   "bytes": 30376515,
+   "available_files": 2117,
+   "available_bytes": 30376515
+  },
+  "gutenberg_cjk_ja": {
+   "bucket": "japanese",
+   "files": 21,
+   "bytes": 6652286,
+   "available_files": 21,
+   "available_bytes": 6652286
+  },
+  "gutenberg_cjk_zh": {
+   "bucket": "chinese",
+   "files": 314,
+   "bytes": 115340844,
+   "available_files": 400,
+   "available_bytes": 151072937
+  },
+  "gutenberg_en": {
+   "bucket": "english",
+   "files": 61,
+   "bytes": 47142381,
+   "available_files": 94,
+   "available_bytes": 83528306
+  },
+  "gutenberg_science": {
+   "bucket": "stem",
+   "files": 72,
+   "bytes": 28705513,
+   "available_files": 72,
+   "available_bytes": 28705513
+  },
+  "gutenberg_science2": {
+   "bucket": "stem",
+   "files": 112,
+   "bytes": 34546413,
+   "available_files": 112,
+   "available_bytes": 34546413
+  },
+  "hiwiki": {
+   "bucket": "hindi",
+   "files": 109,
+   "bytes": 229925242,
+   "available_files": 311,
+   "available_bytes": 654622343
+  },
+  "jawikisource": {
+   "bucket": "japanese",
+   "files": 52,
+   "bytes": 113600651,
+   "available_files": 113,
+   "available_bytes": 248338376
+  },
+  "jawiktionary": {
+   "bucket": "japanese",
+   "files": 7,
+   "bytes": 14340390,
+   "available_files": 7,
+   "available_bytes": 14340390
+  },
+  "kowikisource": {
+   "bucket": "korean",
+   "files": 84,
+   "bytes": 177888089,
+   "available_files": 247,
+   "available_bytes": 529096573
+  },
+  "kowiktionary": {
+   "bucket": "korean",
+   "files": 5,
+   "bytes": 9062580,
+   "available_files": 5,
+   "available_bytes": 9062580
+  },
+  "rust_src": {
+   "bucket": "programming",
+   "files": 1419,
+   "bytes": 15593730,
+   "available_files": 1419,
+   "available_bytes": 15593730
+  },
+  "simplewiki": {
+   "bucket": "english",
+   "files": 50,
+   "bytes": 104307857,
+   "available_files": 135,
+   "available_bytes": 282998668
+  },
+  "tatoeba_ara": {
+   "bucket": "arabic",
+   "files": 1,
+   "bytes": 390410,
+   "available_files": 1,
+   "available_bytes": 390410
+  },
+  "tatoeba_ben": {
+   "bucket": "other_languages",
+   "files": 1,
+   "bytes": 717924,
+   "available_files": 1,
+   "available_bytes": 717924
+  },
+  "tatoeba_cmn": {
+   "bucket": "chinese",
+   "files": 1,
+   "bytes": 271903,
+   "available_files": 1,
+   "available_bytes": 271903
+  },
+  "tatoeba_deu": {
+   "bucket": "other_languages",
+   "files": 1,
+   "bytes": 320669,
+   "available_files": 1,
+   "available_bytes": 320669
+  },
+  "tatoeba_ell": {
+   "bucket": "other_languages",
+   "files": 1,
+   "bytes": 446096,
+   "available_files": 1,
+   "available_bytes": 446096
+  },
+  "tatoeba_fra": {
+   "bucket": "other_languages",
+   "files": 1,
+   "bytes": 352701,
+   "available_files": 1,
+   "available_bytes": 352701
+  },
+  "tatoeba_heb": {
+   "bucket": "other_languages",
+   "files": 1,
+   "bytes": 364726,
+   "available_files": 1,
+   "available_bytes": 364726
+  },
+  "tatoeba_hin": {
+   "bucket": "hindi",
+   "files": 1,
+   "bytes": 640865,
+   "available_files": 1,
+   "available_bytes": 640865
+  },
+  "tatoeba_jpn": {
+   "bucket": "japanese",
+   "files": 1,
+   "bytes": 499899,
+   "available_files": 1,
+   "available_bytes": 499899
+  },
+  "tatoeba_kor": {
+   "bucket": "korean",
+   "files": 1,
+   "bytes": 319527,
+   "available_files": 1,
+   "available_bytes": 319527
+  },
+  "tatoeba_rus": {
+   "bucket": "other_languages",
+   "files": 1,
+   "bytes": 550233,
+   "available_files": 1,
+   "available_bytes": 550233
+  },
+  "tatoeba_spa": {
+   "bucket": "spanish",
+   "files": 1,
+   "bytes": 296843,
+   "available_files": 1,
+   "available_bytes": 296843
+  },
+  "tatoeba_tam": {
+   "bucket": "other_languages",
+   "files": 1,
+   "bytes": 49074,
+   "available_files": 1,
+   "available_bytes": 49074
+  },
+  "tatoeba_tha": {
+   "bucket": "other_languages",
+   "files": 1,
+   "bytes": 434219,
+   "available_files": 1,
+   "available_bytes": 434219
+  },
+  "tatoeba_tur": {
+   "bucket": "turkish",
+   "files": 1,
+   "bytes": 299988,
+   "available_files": 1,
+   "available_bytes": 299988
+  },
+  "tatoeba_vie": {
+   "bucket": "other_languages",
+   "files": 1,
+   "bytes": 400472,
+   "available_files": 1,
+   "available_bytes": 400472
+  },
+  "trwiki": {
+   "bucket": "turkish",
+   "files": 110,
+   "bytes": 230607258,
+   "available_files": 448,
+   "available_bytes": 939372413
+  },
+  "trwikisource": {
+   "bucket": "turkish",
+   "files": 22,
+   "bytes": 46979812,
+   "available_files": 28,
+   "available_bytes": 59789994
+  },
+  "trwiktionary": {
+   "bucket": "turkish",
+   "files": 5,
+   "bytes": 9303167,
+   "available_files": 5,
+   "available_bytes": 9303167
+  },
+  "typescript_src": {
+   "bucket": "programming",
+   "files": 686,
+   "bytes": 31722496,
+   "available_files": 686,
+   "available_bytes": 31722496
+  },
+  "zhwiktionary": {
+   "bucket": "chinese",
+   "files": 8,
+   "bytes": 14688678,
+   "available_files": 8,
+   "available_bytes": 14688678
+  }
+ }
+}

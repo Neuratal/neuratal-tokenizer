@@ -1,0 +1,37 @@
+{
+ "files": {
+  "train": 9068,
+  "benchmark": 472
+ },
+ "A_file_exact_overlap": {
+  "count": 0,
+  "files": []
+ },
+ "B_normalized_exact_overlap": {
+  "count": 0,
+  "files": []
+ },
+ "C_line_exact_overlap": {
+  "min_line_chars": 100,
+  "train_file_lines_also_in_benchmark": 24738,
+  "of_which_boilerplate_in_50plus_train_files": 0,
+  "distinct_overlapping_benchmark_lines": 54944
+ },
+ "D_shingle_containment": {
+  "threshold": 0.6,
+  "max_containment": 0.594,
+  "worst_pair": {
+   "benchmark": "data/v0.4/benchmark/holdout/programming/cpython_code_test_regrtestdata_import_from_tests_test_regrtest_b___init__.py.txt",
+   "train": "data/v0.4/_audit_train_farm/cpython_code_test_regrtestdata_import_from_tests_test_regrtest_a.py.txt",
+   "containment": 0.594
+  },
+  "violations": [],
+  "all_matches": []
+ },
+ "verdict": {
+  "file_exact_leak": true,
+  "normalized_exact_leak": true,
+  "shingle_containment_leak": true
+ },
+ "passed": true
+}

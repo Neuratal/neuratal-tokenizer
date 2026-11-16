@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use NTokenizer, please cite it as below."
+title: "NTokenizer — Neuratal Tokenizer"
+authors:
+  - family-names: "Erdem"
+    given-names: "Rüzgar"
+orcid: null
+date-released: "2026-11-15"
+license: "MIT OR Apache-2.0"
+repository-code: "https://github.com/Neuratal/neuratal-tokenizer"
+url: "https://github.com/Neuratal/neuratal-tokenizer"
+version: "v0.3-polished"
+keywords:
+  - tokenizer
+  - bpe
+  - byte-level-bpe
+  - multilingual
+  - nlp
+  - rust
+  - ai-infrastructure
+notes: >-
+  NTokenizer is an independent AI research and software project by Neuratal.
+  The trained model artifact is distributed separately under CC BY-SA 4.0
+  (see NOTICE); the source code is MIT OR Apache-2.0.

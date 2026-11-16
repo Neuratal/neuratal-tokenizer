@@ -1,0 +1,8 @@
+target
+coverage
+artifacts
+# Keep the small, hand-picked corpus seeds under version control for reproducibility.
+!corpus/
+!corpus/load_model/
+!corpus/load_model/valid_base.ntok
+!corpus/load_model/legacy_v1_header.rzt

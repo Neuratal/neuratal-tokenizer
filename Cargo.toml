@@ -1,0 +1,31 @@
+[package]
+name = "neuratal-tokenizer"
+version = "0.3.0"
+edition = "2024"
+authors = ["Neuratal Tokenizer Contributors"]
+description = "Neuratal Tokenizer (NTokenizer): multilingual byte-level BPE tokenizer implemented from scratch in pure Rust."
+license = "MIT OR Apache-2.0"
+keywords = ["tokenizer", "bpe", "byte-level", "unicode", "multilingual"]
+categories = ["text-processing", "parser-implementations"]
+
+[lib]
+name = "neuratal_tokenizer"
+path = "src/lib.rs"
+crate-type = ["cdylib", "rlib"]
+
+[[bin]]
+name = "ntokenizer"
+path = "src/main.rs"
+
+[dependencies]
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+clap = { version = "4.6", features = ["derive"] }
+rayon = "1.12"
+unicode-normalization = "0.1"
+pyo3 = { version = "0.30.1", features = ["extension-module"], optional = true }
+unicode-general-category = "1"
+unicode-script = "0.5"
+
+[features]
+pyo3 = ["dep:pyo3"]

@@ -1,0 +1,38 @@
+Neuratal Tokenizer (NTokenizer)
+Copyright 2026 Neuratal and the NTokenizer contributors
+
+This NOTICE covers attribution and license scope for distributed components.
+
+1. Source code (src/, examples/, tests/, python/, fuzz/) is dual-licensed MIT OR
+   Apache-2.0 at the recipient's option. See LICENSE and THIRD_PARTY_NOTICES.md.
+
+2. Documentation is dual-licensed MIT OR Apache-2.0.
+
+3. The trained model artifact (ntokenizer-0.3-256k.ntok) and its Hugging Face export
+   are machine-learned derivatives of a training corpus dominated by CC BY-SA/GFDL
+   text (Wikimedia projects) and CC BY material (arXiv per-article-verified CC BY 4.0,
+   Tatoeba CC BY 2.0 FR), plus public-domain (Project Gutenberg) and permissively
+   licensed code (PSF, MIT/Apache-2.0, BSD-3-Clause, Apache-2.0).
+
+   Attribution for the wiki-derived training text follows the pattern:
+   "<project> contributors, <license>, <URL>"
+
+   - Simple English Wikipedia: "Simple English Wikipedia contributors, CC BY-SA 4.0, https://simple.wikipedia.org"
+   - Turkish Wikipedia: "Türkçe Wikipedia katkıda bulunanlar, CC BY-SA 3.0, https://tr.wikipedia.org"
+   - Hindi Wikipedia: "Hindi Wikipedia के योगदानकर्ता, CC BY-SA 4.0, https://hi.wikipedia.org"
+   - Wikisource projects (es/tr/ja/ko), Wiktionary (zh/ja/ko/tr), enwikibooks, enwikinews
+     — same pattern per project and dump; see data/v0.2/LICENSES.md of the full project
+     for the complete table.
+
+   These CC BY-SA obligations are why the model artifact is distributed under
+   CC BY-SA 4.0, not Apache-2.0. ShareAlike applies to adaptations of the model.
+
+4. NTokenizer does not include, and this notice does not grant rights to, any
+   training corpus, benchmark data, or holdout data. None are distributed.
+
+5. NTokenizer is an independent implementation written from scratch in Rust. It does
+   not use, adapt or copy source code, vocabularies or merge tables from Hugging
+   Face Tokenizers, SentencePiece, tiktoken or any other third-party tokenizer engine.
+
+6. Founder and creator: Rüzgar Erdem. Neuratal is an independent AI research and
+   software development project; it is not claimed to be an incorporated company.

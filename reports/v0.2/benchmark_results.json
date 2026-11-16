@@ -1,0 +1,1645 @@
+{
+ "benchmark": "data/v0.2/clean/benchmark",
+ "files": 544,
+ "total_bytes": 207712944,
+ "results": [
+  {
+   "model": "ntokenizer-0.1-256k",
+   "n_vocab": null,
+   "files": 544,
+   "total_bytes": 207712944,
+   "total_tokens": 65573253,
+   "total_words": 22830490,
+   "bytes_per_token": 3.1676,
+   "tokens_per_byte": 0.315692,
+   "tokens_per_word": 2.8722,
+   "avg_token_len_bytes": 3.1676,
+   "encode_seconds": 17.288,
+   "encode_mb_per_s": 12.01,
+   "decode_exact_files": 544,
+   "decode_mismatch_files": 0,
+   "by_bucket": {
+    "arabic": {
+     "files": 19,
+     "bytes": 40603802,
+     "tokens": 10840608,
+     "words": 4083437,
+     "bytes_per_token": 3.7455,
+     "tokens_per_byte": 0.266985,
+     "tokens_per_word": 2.6548
+    },
+    "chinese": {
+     "files": 18,
+     "bytes": 2953545,
+     "tokens": 1118346,
+     "words": 98426,
+     "bytes_per_token": 2.641,
+     "tokens_per_byte": 0.378645,
+     "tokens_per_word": 11.3623
+    },
+    "english": {
+     "files": 17,
+     "bytes": 32061792,
+     "tokens": 12255297,
+     "words": 5175796,
+     "bytes_per_token": 2.6162,
+     "tokens_per_byte": 0.38224,
+     "tokens_per_word": 2.3678
+    },
+    "hindi": {
+     "files": 15,
+     "bytes": 29236603,
+     "tokens": 5092081,
+     "words": 2116140,
+     "bytes_per_token": 5.7416,
+     "tokens_per_byte": 0.174168,
+     "tokens_per_word": 2.4063
+    },
+    "japanese": {
+     "files": 7,
+     "bytes": 10140058,
+     "tokens": 2965881,
+     "words": 145947,
+     "bytes_per_token": 3.4189,
+     "tokens_per_byte": 0.292492,
+     "tokens_per_word": 20.3216
+    },
+    "korean": {
+     "files": 14,
+     "bytes": 25256943,
+     "tokens": 10348682,
+     "words": 2242707,
+     "bytes_per_token": 2.4406,
+     "tokens_per_byte": 0.409736,
+     "tokens_per_word": 4.6144
+    },
+    "other_languages": {
+     "files": 9,
+     "bytes": 155655,
+     "tokens": 53564,
+     "words": 15735,
+     "bytes_per_token": 2.906,
+     "tokens_per_byte": 0.34412,
+     "tokens_per_word": 3.4041
+    },
+    "programming": {
+     "files": 300,
+     "bytes": 4097276,
+     "tokens": 1538999,
+     "words": 446866,
+     "bytes_per_token": 2.6623,
+     "tokens_per_byte": 0.375615,
+     "tokens_per_word": 3.444
+    },
+    "spanish": {
+     "files": 9,
+     "bytes": 15886346,
+     "tokens": 6000204,
+     "words": 2620138,
+     "bytes_per_token": 2.6476,
+     "tokens_per_byte": 0.377696,
+     "tokens_per_word": 2.29
+    },
+    "stem": {
+     "files": 113,
+     "bytes": 4319347,
+     "tokens": 1863796,
+     "words": 658426,
+     "bytes_per_token": 2.3175,
+     "tokens_per_byte": 0.431499,
+     "tokens_per_word": 2.8307
+    },
+    "turkish": {
+     "files": 23,
+     "bytes": 43001577,
+     "tokens": 13495795,
+     "words": 5226872,
+     "bytes_per_token": 3.1863,
+     "tokens_per_byte": 0.313844,
+     "tokens_per_word": 2.582
+    }
+   }
+  },
+  {
+   "model": "ntokenizer-0.2-ntokenizer-0.2-256k-131072",
+   "n_vocab": null,
+   "files": 544,
+   "total_bytes": 207712944,
+   "total_tokens": 45091962,
+   "total_words": 22830490,
+   "bytes_per_token": 4.6064,
+   "tokens_per_byte": 0.217088,
+   "tokens_per_word": 1.9751,
+   "avg_token_len_bytes": 4.6064,
+   "encode_seconds": 18.734,
+   "encode_mb_per_s": 11.09,
+   "decode_exact_files": 544,
+   "decode_mismatch_files": 0,
+   "by_bucket": {
+    "arabic": {
+     "files": 19,
+     "bytes": 40603802,
+     "tokens": 7396424,
+     "words": 4083437,
+     "bytes_per_token": 5.4897,
+     "tokens_per_byte": 0.182161,
+     "tokens_per_word": 1.8113
+    },
+    "chinese": {
+     "files": 18,
+     "bytes": 2953545,
+     "tokens": 837783,
+     "words": 98426,
+     "bytes_per_token": 3.5254,
+     "tokens_per_byte": 0.283653,
+     "tokens_per_word": 8.5118
+    },
+    "english": {
+     "files": 17,
+     "bytes": 32061792,
+     "tokens": 8174122,
+     "words": 5175796,
+     "bytes_per_token": 3.9224,
+     "tokens_per_byte": 0.254949,
+     "tokens_per_word": 1.5793
+    },
+    "hindi": {
+     "files": 15,
+     "bytes": 29236603,
+     "tokens": 3663675,
+     "words": 2116140,
+     "bytes_per_token": 7.9801,
+     "tokens_per_byte": 0.125311,
+     "tokens_per_word": 1.7313
+    },
+    "japanese": {
+     "files": 7,
+     "bytes": 10140058,
+     "tokens": 2054494,
+     "words": 145947,
+     "bytes_per_token": 4.9356,
+     "tokens_per_byte": 0.202612,
+     "tokens_per_word": 14.077
+    },
+    "korean": {
+     "files": 14,
+     "bytes": 25256943,
+     "tokens": 6091279,
+     "words": 2242707,
+     "bytes_per_token": 4.1464,
+     "tokens_per_byte": 0.241172,
+     "tokens_per_word": 2.716
+    },
+    "other_languages": {
+     "files": 9,
+     "bytes": 155655,
+     "tokens": 45354,
+     "words": 15735,
+     "bytes_per_token": 3.432,
+     "tokens_per_byte": 0.291375,
+     "tokens_per_word": 2.8824
+    },
+    "programming": {
+     "files": 300,
+     "bytes": 4097276,
+     "tokens": 1305305,
+     "words": 446866,
+     "bytes_per_token": 3.1389,
+     "tokens_per_byte": 0.318579,
+     "tokens_per_word": 2.921
+    },
+    "spanish": {
+     "files": 9,
+     "bytes": 15886346,
+     "tokens": 3887773,
+     "words": 2620138,
+     "bytes_per_token": 4.0862,
+     "tokens_per_byte": 0.244724,
+     "tokens_per_word": 1.4838
+    },
+    "stem": {
+     "files": 113,
+     "bytes": 4319347,
+     "tokens": 1446894,
+     "words": 658426,
+     "bytes_per_token": 2.9853,
+     "tokens_per_byte": 0.33498,
+     "tokens_per_word": 2.1975
+    },
+    "turkish": {
+     "files": 23,
+     "bytes": 43001577,
+     "tokens": 10188859,
+     "words": 5226872,
+     "bytes_per_token": 4.2205,
+     "tokens_per_byte": 0.236942,
+     "tokens_per_word": 1.9493
+    }
+   }
+  },
+  {
+   "model": "ntokenizer-0.2-ntokenizer-0.2-256k-16384",
+   "n_vocab": null,
+   "files": 544,
+   "total_bytes": 207712944,
+   "total_tokens": 61148494,
+   "total_words": 22830490,
+   "bytes_per_token": 3.3969,
+   "tokens_per_byte": 0.294389,
+   "tokens_per_word": 2.6784,
+   "avg_token_len_bytes": 3.3969,
+   "encode_seconds": 16.572,
+   "encode_mb_per_s": 12.53,
+   "decode_exact_files": 544,
+   "decode_mismatch_files": 0,
+   "by_bucket": {
+    "arabic": {
+     "files": 19,
+     "bytes": 40603802,
+     "tokens": 10774633,
+     "words": 4083437,
+     "bytes_per_token": 3.7685,
+     "tokens_per_byte": 0.26536,
+     "tokens_per_word": 2.6386
+    },
+    "chinese": {
+     "files": 18,
+     "bytes": 2953545,
+     "tokens": 1047906,
+     "words": 98426,
+     "bytes_per_token": 2.8185,
+     "tokens_per_byte": 0.354796,
+     "tokens_per_word": 10.6466
+    },
+    "english": {
+     "files": 17,
+     "bytes": 32061792,
+     "tokens": 10025962,
+     "words": 5175796,
+     "bytes_per_token": 3.1979,
+     "tokens_per_byte": 0.312707,
+     "tokens_per_word": 1.9371
+    },
+    "hindi": {
+     "files": 15,
+     "bytes": 29236603,
+     "tokens": 5472558,
+     "words": 2116140,
+     "bytes_per_token": 5.3424,
+     "tokens_per_byte": 0.187182,
+     "tokens_per_word": 2.5861
+    },
+    "japanese": {
+     "files": 7,
+     "bytes": 10140058,
+     "tokens": 2834860,
+     "words": 145947,
+     "bytes_per_token": 3.5769,
+     "tokens_per_byte": 0.27957,
+     "tokens_per_word": 19.4239
+    },
+    "korean": {
+     "files": 14,
+     "bytes": 25256943,
+     "tokens": 8194311,
+     "words": 2242707,
+     "bytes_per_token": 3.0823,
+     "tokens_per_byte": 0.324438,
+     "tokens_per_word": 3.6538
+    },
+    "other_languages": {
+     "files": 9,
+     "bytes": 155655,
+     "tokens": 73696,
+     "words": 15735,
+     "bytes_per_token": 2.1121,
+     "tokens_per_byte": 0.473457,
+     "tokens_per_word": 4.6836
+    },
+    "programming": {
+     "files": 300,
+     "bytes": 4097276,
+     "tokens": 1513162,
+     "words": 446866,
+     "bytes_per_token": 2.7078,
+     "tokens_per_byte": 0.369309,
+     "tokens_per_word": 3.3862
+    },
+    "spanish": {
+     "files": 9,
+     "bytes": 15886346,
+     "tokens": 5241582,
+     "words": 2620138,
+     "bytes_per_token": 3.0308,
+     "tokens_per_byte": 0.329943,
+     "tokens_per_word": 2.0005
+    },
+    "stem": {
+     "files": 113,
+     "bytes": 4319347,
+     "tokens": 1796588,
+     "words": 658426,
+     "bytes_per_token": 2.4042,
+     "tokens_per_byte": 0.41594,
+     "tokens_per_word": 2.7286
+    },
+    "turkish": {
+     "files": 23,
+     "bytes": 43001577,
+     "tokens": 14173236,
+     "words": 5226872,
+     "bytes_per_token": 3.034,
+     "tokens_per_byte": 0.329598,
+     "tokens_per_word": 2.7116
+    }
+   }
+  },
+  {
+   "model": "ntokenizer-0.2-ntokenizer-0.2-256k-196608",
+   "n_vocab": null,
+   "files": 544,
+   "total_bytes": 207712944,
+   "total_tokens": 43274466,
+   "total_words": 22830490,
+   "bytes_per_token": 4.7999,
+   "tokens_per_byte": 0.208338,
+   "tokens_per_word": 1.8955,
+   "avg_token_len_bytes": 4.7999,
+   "encode_seconds": 19.355,
+   "encode_mb_per_s": 10.73,
+   "decode_exact_files": 544,
+   "decode_mismatch_files": 0,
+   "by_bucket": {
+    "arabic": {
+     "files": 19,
+     "bytes": 40603802,
+     "tokens": 6991773,
+     "words": 4083437,
+     "bytes_per_token": 5.8074,
+     "tokens_per_byte": 0.172195,
+     "tokens_per_word": 1.7122
+    },
+    "chinese": {
+     "files": 18,
+     "bytes": 2953545,
+     "tokens": 806637,
+     "words": 98426,
+     "bytes_per_token": 3.6616,
+     "tokens_per_byte": 0.273108,
+     "tokens_per_word": 8.1954
+    },
+    "english": {
+     "files": 17,
+     "bytes": 32061792,
+     "tokens": 8006874,
+     "words": 5175796,
+     "bytes_per_token": 4.0043,
+     "tokens_per_byte": 0.249733,
+     "tokens_per_word": 1.547
+    },
+    "hindi": {
+     "files": 15,
+     "bytes": 29236603,
+     "tokens": 3484562,
+     "words": 2116140,
+     "bytes_per_token": 8.3903,
+     "tokens_per_byte": 0.119185,
+     "tokens_per_word": 1.6467
+    },
+    "japanese": {
+     "files": 7,
+     "bytes": 10140058,
+     "tokens": 1952548,
+     "words": 145947,
+     "bytes_per_token": 5.1932,
+     "tokens_per_byte": 0.192558,
+     "tokens_per_word": 13.3785
+    },
+    "korean": {
+     "files": 14,
+     "bytes": 25256943,
+     "tokens": 5823463,
+     "words": 2242707,
+     "bytes_per_token": 4.3371,
+     "tokens_per_byte": 0.230569,
+     "tokens_per_word": 2.5966
+    },
+    "other_languages": {
+     "files": 9,
+     "bytes": 155655,
+     "tokens": 41839,
+     "words": 15735,
+     "bytes_per_token": 3.7203,
+     "tokens_per_byte": 0.268793,
+     "tokens_per_word": 2.659
+    },
+    "programming": {
+     "files": 300,
+     "bytes": 4097276,
+     "tokens": 1287289,
+     "words": 446866,
+     "bytes_per_token": 3.1829,
+     "tokens_per_byte": 0.314182,
+     "tokens_per_word": 2.8807
+    },
+    "spanish": {
+     "files": 9,
+     "bytes": 15886346,
+     "tokens": 3727783,
+     "words": 2620138,
+     "bytes_per_token": 4.2616,
+     "tokens_per_byte": 0.234653,
+     "tokens_per_word": 1.4227
+    },
+    "stem": {
+     "files": 113,
+     "bytes": 4319347,
+     "tokens": 1410381,
+     "words": 658426,
+     "bytes_per_token": 3.0625,
+     "tokens_per_byte": 0.326526,
+     "tokens_per_word": 2.142
+    },
+    "turkish": {
+     "files": 23,
+     "bytes": 43001577,
+     "tokens": 9741317,
+     "words": 5226872,
+     "bytes_per_token": 4.4143,
+     "tokens_per_byte": 0.226534,
+     "tokens_per_word": 1.8637
+    }
+   }
+  },
+  {
+   "model": "ntokenizer-0.2-ntokenizer-0.2-256k-262144",
+   "n_vocab": null,
+   "files": 544,
+   "total_bytes": 207712944,
+   "total_tokens": 42140653,
+   "total_words": 22830490,
+   "bytes_per_token": 4.929,
+   "tokens_per_byte": 0.202879,
+   "tokens_per_word": 1.8458,
+   "avg_token_len_bytes": 4.929,
+   "encode_seconds": 19.593,
+   "encode_mb_per_s": 10.6,
+   "decode_exact_files": 544,
+   "decode_mismatch_files": 0,
+   "by_bucket": {
+    "arabic": {
+     "files": 19,
+     "bytes": 40603802,
+     "tokens": 6715228,
+     "words": 4083437,
+     "bytes_per_token": 6.0465,
+     "tokens_per_byte": 0.165384,
+     "tokens_per_word": 1.6445
+    },
+    "chinese": {
+     "files": 18,
+     "bytes": 2953545,
+     "tokens": 786678,
+     "words": 98426,
+     "bytes_per_token": 3.7545,
+     "tokens_per_byte": 0.26635,
+     "tokens_per_word": 7.9926
+    },
+    "english": {
+     "files": 17,
+     "bytes": 32061792,
+     "tokens": 7912415,
+     "words": 5175796,
+     "bytes_per_token": 4.0521,
+     "tokens_per_byte": 0.246786,
+     "tokens_per_word": 1.5287
+    },
+    "hindi": {
+     "files": 15,
+     "bytes": 29236603,
+     "tokens": 3370829,
+     "words": 2116140,
+     "bytes_per_token": 8.6734,
+     "tokens_per_byte": 0.115295,
+     "tokens_per_word": 1.5929
+    },
+    "japanese": {
+     "files": 7,
+     "bytes": 10140058,
+     "tokens": 1885945,
+     "words": 145947,
+     "bytes_per_token": 5.3766,
+     "tokens_per_byte": 0.18599,
+     "tokens_per_word": 12.9221
+    },
+    "korean": {
+     "files": 14,
+     "bytes": 25256943,
+     "tokens": 5652983,
+     "words": 2242707,
+     "bytes_per_token": 4.4679,
+     "tokens_per_byte": 0.223819,
+     "tokens_per_word": 2.5206
+    },
+    "other_languages": {
+     "files": 9,
+     "bytes": 155655,
+     "tokens": 39431,
+     "words": 15735,
+     "bytes_per_token": 3.9475,
+     "tokens_per_byte": 0.253323,
+     "tokens_per_word": 2.5059
+    },
+    "programming": {
+     "files": 300,
+     "bytes": 4097276,
+     "tokens": 1275622,
+     "words": 446866,
+     "bytes_per_token": 3.212,
+     "tokens_per_byte": 0.311334,
+     "tokens_per_word": 2.8546
+    },
+    "spanish": {
+     "files": 9,
+     "bytes": 15886346,
+     "tokens": 3633968,
+     "words": 2620138,
+     "bytes_per_token": 4.3716,
+     "tokens_per_byte": 0.228748,
+     "tokens_per_word": 1.3869
+    },
+    "stem": {
+     "files": 113,
+     "bytes": 4319347,
+     "tokens": 1392650,
+     "words": 658426,
+     "bytes_per_token": 3.1015,
+     "tokens_per_byte": 0.322421,
+     "tokens_per_word": 2.1151
+    },
+    "turkish": {
+     "files": 23,
+     "bytes": 43001577,
+     "tokens": 9474904,
+     "words": 5226872,
+     "bytes_per_token": 4.5385,
+     "tokens_per_byte": 0.220339,
+     "tokens_per_word": 1.8127
+    }
+   }
+  },
+  {
+   "model": "ntokenizer-0.2-ntokenizer-0.2-256k-32768",
+   "n_vocab": null,
+   "files": 544,
+   "total_bytes": 207712944,
+   "total_tokens": 54347180,
+   "total_words": 22830490,
+   "bytes_per_token": 3.822,
+   "tokens_per_byte": 0.261646,
+   "tokens_per_word": 2.3805,
+   "avg_token_len_bytes": 3.822,
+   "encode_seconds": 17.185,
+   "encode_mb_per_s": 12.09,
+   "decode_exact_files": 544,
+   "decode_mismatch_files": 0,
+   "by_bucket": {
+    "arabic": {
+     "files": 19,
+     "bytes": 40603802,
+     "tokens": 9362623,
+     "words": 4083437,
+     "bytes_per_token": 4.3368,
+     "tokens_per_byte": 0.230585,
+     "tokens_per_word": 2.2928
+    },
+    "chinese": {
+     "files": 18,
+     "bytes": 2953545,
+     "tokens": 964778,
+     "words": 98426,
+     "bytes_per_token": 3.0614,
+     "tokens_per_byte": 0.326651,
+     "tokens_per_word": 9.8021
+    },
+    "english": {
+     "files": 17,
+     "bytes": 32061792,
+     "tokens": 9164677,
+     "words": 5175796,
+     "bytes_per_token": 3.4984,
+     "tokens_per_byte": 0.285844,
+     "tokens_per_word": 1.7707
+    },
+    "hindi": {
+     "files": 15,
+     "bytes": 29236603,
+     "tokens": 4694937,
+     "words": 2116140,
+     "bytes_per_token": 6.2273,
+     "tokens_per_byte": 0.160584,
+     "tokens_per_word": 2.2186
+    },
+    "japanese": {
+     "files": 7,
+     "bytes": 10140058,
+     "tokens": 2538597,
+     "words": 145947,
+     "bytes_per_token": 3.9944,
+     "tokens_per_byte": 0.250353,
+     "tokens_per_word": 17.394
+    },
+    "korean": {
+     "files": 14,
+     "bytes": 25256943,
+     "tokens": 7313114,
+     "words": 2242707,
+     "bytes_per_token": 3.4537,
+     "tokens_per_byte": 0.289549,
+     "tokens_per_word": 3.2608
+    },
+    "other_languages": {
+     "files": 9,
+     "bytes": 155655,
+     "tokens": 62475,
+     "words": 15735,
+     "bytes_per_token": 2.4915,
+     "tokens_per_byte": 0.401368,
+     "tokens_per_word": 3.9704
+    },
+    "programming": {
+     "files": 300,
+     "bytes": 4097276,
+     "tokens": 1415942,
+     "words": 446866,
+     "bytes_per_token": 2.8937,
+     "tokens_per_byte": 0.345581,
+     "tokens_per_word": 3.1686
+    },
+    "spanish": {
+     "files": 9,
+     "bytes": 15886346,
+     "tokens": 4688333,
+     "words": 2620138,
+     "bytes_per_token": 3.3885,
+     "tokens_per_byte": 0.295117,
+     "tokens_per_word": 1.7893
+    },
+    "stem": {
+     "files": 113,
+     "bytes": 4319347,
+     "tokens": 1649944,
+     "words": 658426,
+     "bytes_per_token": 2.6179,
+     "tokens_per_byte": 0.381989,
+     "tokens_per_word": 2.5059
+    },
+    "turkish": {
+     "files": 23,
+     "bytes": 43001577,
+     "tokens": 12491760,
+     "words": 5226872,
+     "bytes_per_token": 3.4424,
+     "tokens_per_byte": 0.290495,
+     "tokens_per_word": 2.3899
+    }
+   }
+  },
+  {
+   "model": "ntokenizer-0.2-ntokenizer-0.2-256k-65536",
+   "n_vocab": null,
+   "files": 544,
+   "total_bytes": 207712944,
+   "total_tokens": 49116692,
+   "total_words": 22830490,
+   "bytes_per_token": 4.229,
+   "tokens_per_byte": 0.236464,
+   "tokens_per_word": 2.1514,
+   "avg_token_len_bytes": 4.229,
+   "encode_seconds": 17.945,
+   "encode_mb_per_s": 11.57,
+   "decode_exact_files": 544,
+   "decode_mismatch_files": 0,
+   "by_bucket": {
+    "arabic": {
+     "files": 19,
+     "bytes": 40603802,
+     "tokens": 8280013,
+     "words": 4083437,
+     "bytes_per_token": 4.9038,
+     "tokens_per_byte": 0.203922,
+     "tokens_per_word": 2.0277
+    },
+    "chinese": {
+     "files": 18,
+     "bytes": 2953545,
+     "tokens": 896365,
+     "words": 98426,
+     "bytes_per_token": 3.295,
+     "tokens_per_byte": 0.303488,
+     "tokens_per_word": 9.107
+    },
+    "english": {
+     "files": 17,
+     "bytes": 32061792,
+     "tokens": 8572959,
+     "words": 5175796,
+     "bytes_per_token": 3.7399,
+     "tokens_per_byte": 0.267389,
+     "tokens_per_word": 1.6564
+    },
+    "hindi": {
+     "files": 15,
+     "bytes": 29236603,
+     "tokens": 4094070,
+     "words": 2116140,
+     "bytes_per_token": 7.1412,
+     "tokens_per_byte": 0.140032,
+     "tokens_per_word": 1.9347
+    },
+    "japanese": {
+     "files": 7,
+     "bytes": 10140058,
+     "tokens": 2276585,
+     "words": 145947,
+     "bytes_per_token": 4.4541,
+     "tokens_per_byte": 0.224514,
+     "tokens_per_word": 15.5987
+    },
+    "korean": {
+     "files": 14,
+     "bytes": 25256943,
+     "tokens": 6631040,
+     "words": 2242707,
+     "bytes_per_token": 3.8089,
+     "tokens_per_byte": 0.262543,
+     "tokens_per_word": 2.9567
+    },
+    "other_languages": {
+     "files": 9,
+     "bytes": 155655,
+     "tokens": 52943,
+     "words": 15735,
+     "bytes_per_token": 2.94,
+     "tokens_per_byte": 0.34013,
+     "tokens_per_word": 3.3647
+    },
+    "programming": {
+     "files": 300,
+     "bytes": 4097276,
+     "tokens": 1350631,
+     "words": 446866,
+     "bytes_per_token": 3.0336,
+     "tokens_per_byte": 0.329641,
+     "tokens_per_word": 3.0225
+    },
+    "spanish": {
+     "files": 9,
+     "bytes": 15886346,
+     "tokens": 4238466,
+     "words": 2620138,
+     "bytes_per_token": 3.7481,
+     "tokens_per_byte": 0.266799,
+     "tokens_per_word": 1.6176
+    },
+    "stem": {
+     "files": 113,
+     "bytes": 4319347,
+     "tokens": 1545865,
+     "words": 658426,
+     "bytes_per_token": 2.7941,
+     "tokens_per_byte": 0.357893,
+     "tokens_per_word": 2.3478
+    },
+    "turkish": {
+     "files": 23,
+     "bytes": 43001577,
+     "tokens": 11177755,
+     "words": 5226872,
+     "bytes_per_token": 3.8471,
+     "tokens_per_byte": 0.259938,
+     "tokens_per_word": 2.1385
+    }
+   }
+  },
+  {
+   "model": "ntokenizer-0.2-ntokenizer-0.2-256k-8192",
+   "n_vocab": null,
+   "files": 544,
+   "total_bytes": 207712944,
+   "total_tokens": 69457972,
+   "total_words": 22830490,
+   "bytes_per_token": 2.9905,
+   "tokens_per_byte": 0.334394,
+   "tokens_per_word": 3.0423,
+   "avg_token_len_bytes": 2.9905,
+   "encode_seconds": 15.897,
+   "encode_mb_per_s": 13.07,
+   "decode_exact_files": 544,
+   "decode_mismatch_files": 0,
+   "by_bucket": {
+    "arabic": {
+     "files": 19,
+     "bytes": 40603802,
+     "tokens": 12280572,
+     "words": 4083437,
+     "bytes_per_token": 3.3063,
+     "tokens_per_byte": 0.302449,
+     "tokens_per_word": 3.0074
+    },
+    "chinese": {
+     "files": 18,
+     "bytes": 2953545,
+     "tokens": 1159052,
+     "words": 98426,
+     "bytes_per_token": 2.5482,
+     "tokens_per_byte": 0.392427,
+     "tokens_per_word": 11.7759
+    },
+    "english": {
+     "files": 17,
+     "bytes": 32061792,
+     "tokens": 11178481,
+     "words": 5175796,
+     "bytes_per_token": 2.8682,
+     "tokens_per_byte": 0.348654,
+     "tokens_per_word": 2.1598
+    },
+    "hindi": {
+     "files": 15,
+     "bytes": 29236603,
+     "tokens": 6387057,
+     "words": 2116140,
+     "bytes_per_token": 4.5775,
+     "tokens_per_byte": 0.218461,
+     "tokens_per_word": 3.0183
+    },
+    "japanese": {
+     "files": 7,
+     "bytes": 10140058,
+     "tokens": 3204277,
+     "words": 145947,
+     "bytes_per_token": 3.1645,
+     "tokens_per_byte": 0.316002,
+     "tokens_per_word": 21.9551
+    },
+    "korean": {
+     "files": 14,
+     "bytes": 25256943,
+     "tokens": 9302915,
+     "words": 2242707,
+     "bytes_per_token": 2.7149,
+     "tokens_per_byte": 0.368331,
+     "tokens_per_word": 4.1481
+    },
+    "other_languages": {
+     "files": 9,
+     "bytes": 155655,
+     "tokens": 89743,
+     "words": 15735,
+     "bytes_per_token": 1.7345,
+     "tokens_per_byte": 0.576551,
+     "tokens_per_word": 5.7034
+    },
+    "programming": {
+     "files": 300,
+     "bytes": 4097276,
+     "tokens": 1654141,
+     "words": 446866,
+     "bytes_per_token": 2.477,
+     "tokens_per_byte": 0.403717,
+     "tokens_per_word": 3.7016
+    },
+    "spanish": {
+     "files": 9,
+     "bytes": 15886346,
+     "tokens": 5911582,
+     "words": 2620138,
+     "bytes_per_token": 2.6873,
+     "tokens_per_byte": 0.372117,
+     "tokens_per_word": 2.2562
+    },
+    "stem": {
+     "files": 113,
+     "bytes": 4319347,
+     "tokens": 1976334,
+     "words": 658426,
+     "bytes_per_token": 2.1855,
+     "tokens_per_byte": 0.457554,
+     "tokens_per_word": 3.0016
+    },
+    "turkish": {
+     "files": 23,
+     "bytes": 43001577,
+     "tokens": 16313818,
+     "words": 5226872,
+     "bytes_per_token": 2.6359,
+     "tokens_per_byte": 0.379377,
+     "tokens_per_word": 3.1211
+    }
+   }
+  },
+  {
+   "model": "ntokenizer-0.2-ntokenizer-0.2-256k",
+   "n_vocab": null,
+   "files": 544,
+   "total_bytes": 207712944,
+   "total_tokens": 42140653,
+   "total_words": 22830490,
+   "bytes_per_token": 4.929,
+   "tokens_per_byte": 0.202879,
+   "tokens_per_word": 1.8458,
+   "avg_token_len_bytes": 4.929,
+   "encode_seconds": 19.996,
+   "encode_mb_per_s": 10.39,
+   "decode_exact_files": 544,
+   "decode_mismatch_files": 0,
+   "by_bucket": {
+    "arabic": {
+     "files": 19,
+     "bytes": 40603802,
+     "tokens": 6715228,
+     "words": 4083437,
+     "bytes_per_token": 6.0465,
+     "tokens_per_byte": 0.165384,
+     "tokens_per_word": 1.6445
+    },
+    "chinese": {
+     "files": 18,
+     "bytes": 2953545,
+     "tokens": 786678,
+     "words": 98426,
+     "bytes_per_token": 3.7545,
+     "tokens_per_byte": 0.26635,
+     "tokens_per_word": 7.9926
+    },
+    "english": {
+     "files": 17,
+     "bytes": 32061792,
+     "tokens": 7912415,
+     "words": 5175796,
+     "bytes_per_token": 4.0521,
+     "tokens_per_byte": 0.246786,
+     "tokens_per_word": 1.5287
+    },
+    "hindi": {
+     "files": 15,
+     "bytes": 29236603,
+     "tokens": 3370829,
+     "words": 2116140,
+     "bytes_per_token": 8.6734,
+     "tokens_per_byte": 0.115295,
+     "tokens_per_word": 1.5929
+    },
+    "japanese": {
+     "files": 7,
+     "bytes": 10140058,
+     "tokens": 1885945,
+     "words": 145947,
+     "bytes_per_token": 5.3766,
+     "tokens_per_byte": 0.18599,
+     "tokens_per_word": 12.9221
+    },
+    "korean": {
+     "files": 14,
+     "bytes": 25256943,
+     "tokens": 5652983,
+     "words": 2242707,
+     "bytes_per_token": 4.4679,
+     "tokens_per_byte": 0.223819,
+     "tokens_per_word": 2.5206
+    },
+    "other_languages": {
+     "files": 9,
+     "bytes": 155655,
+     "tokens": 39431,
+     "words": 15735,
+     "bytes_per_token": 3.9475,
+     "tokens_per_byte": 0.253323,
+     "tokens_per_word": 2.5059
+    },
+    "programming": {
+     "files": 300,
+     "bytes": 4097276,
+     "tokens": 1275622,
+     "words": 446866,
+     "bytes_per_token": 3.212,
+     "tokens_per_byte": 0.311334,
+     "tokens_per_word": 2.8546
+    },
+    "spanish": {
+     "files": 9,
+     "bytes": 15886346,
+     "tokens": 3633968,
+     "words": 2620138,
+     "bytes_per_token": 4.3716,
+     "tokens_per_byte": 0.228748,
+     "tokens_per_word": 1.3869
+    },
+    "stem": {
+     "files": 113,
+     "bytes": 4319347,
+     "tokens": 1392650,
+     "words": 658426,
+     "bytes_per_token": 3.1015,
+     "tokens_per_byte": 0.322421,
+     "tokens_per_word": 2.1151
+    },
+    "turkish": {
+     "files": 23,
+     "bytes": 43001577,
+     "tokens": 9474904,
+     "words": 5226872,
+     "bytes_per_token": 4.5385,
+     "tokens_per_byte": 0.220339,
+     "tokens_per_word": 1.8127
+    }
+   }
+  },
+  {
+   "model": "gpt2-r50k",
+   "n_vocab": 50257,
+   "files": 544,
+   "total_bytes": 207712944,
+   "total_tokens": 105229579,
+   "total_words": 22830490,
+   "bytes_per_token": 1.9739,
+   "tokens_per_byte": 0.506611,
+   "tokens_per_word": 4.6092,
+   "avg_token_len_bytes": 1.9739,
+   "encode_seconds": 12.347,
+   "encode_mb_per_s": 16.82,
+   "decode_exact_files": 544,
+   "decode_mismatch_files": 0,
+   "by_bucket": {
+    "arabic": {
+     "files": 19,
+     "bytes": 40603802,
+     "tokens": 22990898,
+     "words": 4083437,
+     "bytes_per_token": 1.7661,
+     "tokens_per_byte": 0.566225,
+     "tokens_per_word": 5.6303
+    },
+    "chinese": {
+     "files": 18,
+     "bytes": 2953545,
+     "tokens": 2178779,
+     "words": 98426,
+     "bytes_per_token": 1.3556,
+     "tokens_per_byte": 0.737683,
+     "tokens_per_word": 22.1362
+    },
+    "english": {
+     "files": 17,
+     "bytes": 32061792,
+     "tokens": 8114320,
+     "words": 5175796,
+     "bytes_per_token": 3.9513,
+     "tokens_per_byte": 0.253084,
+     "tokens_per_word": 1.5677
+    },
+    "hindi": {
+     "files": 15,
+     "bytes": 29236603,
+     "tokens": 17305264,
+     "words": 2116140,
+     "bytes_per_token": 1.6895,
+     "tokens_per_byte": 0.591904,
+     "tokens_per_word": 8.1778
+    },
+    "japanese": {
+     "files": 7,
+     "bytes": 10140058,
+     "tokens": 5294902,
+     "words": 145947,
+     "bytes_per_token": 1.9151,
+     "tokens_per_byte": 0.522177,
+     "tokens_per_word": 36.2796
+    },
+    "korean": {
+     "files": 14,
+     "bytes": 25256943,
+     "tokens": 21171878,
+     "words": 2242707,
+     "bytes_per_token": 1.1929,
+     "tokens_per_byte": 0.83826,
+     "tokens_per_word": 9.4403
+    },
+    "other_languages": {
+     "files": 9,
+     "bytes": 155655,
+     "tokens": 97391,
+     "words": 15735,
+     "bytes_per_token": 1.5982,
+     "tokens_per_byte": 0.625685,
+     "tokens_per_word": 6.1895
+    },
+    "programming": {
+     "files": 300,
+     "bytes": 4097276,
+     "tokens": 1786864,
+     "words": 446866,
+     "bytes_per_token": 2.293,
+     "tokens_per_byte": 0.43611,
+     "tokens_per_word": 3.9987
+    },
+    "spanish": {
+     "files": 9,
+     "bytes": 15886346,
+     "tokens": 5631472,
+     "words": 2620138,
+     "bytes_per_token": 2.821,
+     "tokens_per_byte": 0.354485,
+     "tokens_per_word": 2.1493
+    },
+    "stem": {
+     "files": 113,
+     "bytes": 4319347,
+     "tokens": 1594942,
+     "words": 658426,
+     "bytes_per_token": 2.7082,
+     "tokens_per_byte": 0.369255,
+     "tokens_per_word": 2.4224
+    },
+    "turkish": {
+     "files": 23,
+     "bytes": 43001577,
+     "tokens": 19062869,
+     "words": 5226872,
+     "bytes_per_token": 2.2558,
+     "tokens_per_byte": 0.443306,
+     "tokens_per_word": 3.6471
+    }
+   }
+  },
+  {
+   "model": "cl100k_base",
+   "n_vocab": 100277,
+   "files": 544,
+   "total_bytes": 207712944,
+   "total_tokens": 75061973,
+   "total_words": 22830490,
+   "bytes_per_token": 2.7672,
+   "tokens_per_byte": 0.361374,
+   "tokens_per_word": 3.2878,
+   "avg_token_len_bytes": 2.7672,
+   "encode_seconds": 13.066,
+   "encode_mb_per_s": 15.9,
+   "decode_exact_files": 544,
+   "decode_mismatch_files": 0,
+   "by_bucket": {
+    "arabic": {
+     "files": 19,
+     "bytes": 40603802,
+     "tokens": 16415118,
+     "words": 4083437,
+     "bytes_per_token": 2.4736,
+     "tokens_per_byte": 0.404275,
+     "tokens_per_word": 4.0199
+    },
+    "chinese": {
+     "files": 18,
+     "bytes": 2953545,
+     "tokens": 1508517,
+     "words": 98426,
+     "bytes_per_token": 1.9579,
+     "tokens_per_byte": 0.510748,
+     "tokens_per_word": 15.3264
+    },
+    "english": {
+     "files": 17,
+     "bytes": 32061792,
+     "tokens": 7830257,
+     "words": 5175796,
+     "bytes_per_token": 4.0946,
+     "tokens_per_byte": 0.244224,
+     "tokens_per_word": 1.5129
+    },
+    "hindi": {
+     "files": 15,
+     "bytes": 29236603,
+     "tokens": 11237109,
+     "words": 2116140,
+     "bytes_per_token": 2.6018,
+     "tokens_per_byte": 0.384351,
+     "tokens_per_word": 5.3102
+    },
+    "japanese": {
+     "files": 7,
+     "bytes": 10140058,
+     "tokens": 3969816,
+     "words": 145947,
+     "bytes_per_token": 2.5543,
+     "tokens_per_byte": 0.391498,
+     "tokens_per_word": 27.2004
+    },
+    "korean": {
+     "files": 14,
+     "bytes": 25256943,
+     "tokens": 11288126,
+     "words": 2242707,
+     "bytes_per_token": 2.2375,
+     "tokens_per_byte": 0.446932,
+     "tokens_per_word": 5.0333
+    },
+    "other_languages": {
+     "files": 9,
+     "bytes": 155655,
+     "tokens": 60552,
+     "words": 15735,
+     "bytes_per_token": 2.5706,
+     "tokens_per_byte": 0.389014,
+     "tokens_per_word": 3.8482
+    },
+    "programming": {
+     "files": 300,
+     "bytes": 4097276,
+     "tokens": 1105216,
+     "words": 446866,
+     "bytes_per_token": 3.7072,
+     "tokens_per_byte": 0.269744,
+     "tokens_per_word": 2.4733
+    },
+    "spanish": {
+     "files": 9,
+     "bytes": 15886346,
+     "tokens": 4457546,
+     "words": 2620138,
+     "bytes_per_token": 3.5639,
+     "tokens_per_byte": 0.28059,
+     "tokens_per_word": 1.7013
+    },
+    "stem": {
+     "files": 113,
+     "bytes": 4319347,
+     "tokens": 1476813,
+     "words": 658426,
+     "bytes_per_token": 2.9248,
+     "tokens_per_byte": 0.341907,
+     "tokens_per_word": 2.2429
+    },
+    "turkish": {
+     "files": 23,
+     "bytes": 43001577,
+     "tokens": 15712903,
+     "words": 5226872,
+     "bytes_per_token": 2.7367,
+     "tokens_per_byte": 0.365403,
+     "tokens_per_word": 3.0062
+    }
+   }
+  },
+  {
+   "model": "o200k_base",
+   "n_vocab": 200019,
+   "files": 544,
+   "total_bytes": 207712944,
+   "total_tokens": 50971306,
+   "total_words": 22830490,
+   "bytes_per_token": 4.0751,
+   "tokens_per_byte": 0.245393,
+   "tokens_per_word": 2.2326,
+   "avg_token_len_bytes": 4.0751,
+   "encode_seconds": 9.373,
+   "encode_mb_per_s": 22.16,
+   "decode_exact_files": 544,
+   "decode_mismatch_files": 0,
+   "by_bucket": {
+    "arabic": {
+     "files": 19,
+     "bytes": 40603802,
+     "tokens": 8525134,
+     "words": 4083437,
+     "bytes_per_token": 4.7628,
+     "tokens_per_byte": 0.209959,
+     "tokens_per_word": 2.0877
+    },
+    "chinese": {
+     "files": 18,
+     "bytes": 2953545,
+     "tokens": 1074687,
+     "words": 98426,
+     "bytes_per_token": 2.7483,
+     "tokens_per_byte": 0.363863,
+     "tokens_per_word": 10.9187
+    },
+    "english": {
+     "files": 17,
+     "bytes": 32061792,
+     "tokens": 7718869,
+     "words": 5175796,
+     "bytes_per_token": 4.1537,
+     "tokens_per_byte": 0.24075,
+     "tokens_per_word": 1.4913
+    },
+    "hindi": {
+     "files": 15,
+     "bytes": 29236603,
+     "tokens": 4039854,
+     "words": 2116140,
+     "bytes_per_token": 7.237,
+     "tokens_per_byte": 0.138178,
+     "tokens_per_word": 1.9091
+    },
+    "japanese": {
+     "files": 7,
+     "bytes": 10140058,
+     "tokens": 2961473,
+     "words": 145947,
+     "bytes_per_token": 3.424,
+     "tokens_per_byte": 0.292057,
+     "tokens_per_word": 20.2914
+    },
+    "korean": {
+     "files": 14,
+     "bytes": 25256943,
+     "tokens": 7731404,
+     "words": 2242707,
+     "bytes_per_token": 3.2668,
+     "tokens_per_byte": 0.30611,
+     "tokens_per_word": 3.4474
+    },
+    "other_languages": {
+     "files": 9,
+     "bytes": 155655,
+     "tokens": 30005,
+     "words": 15735,
+     "bytes_per_token": 5.1876,
+     "tokens_per_byte": 0.192766,
+     "tokens_per_word": 1.9069
+    },
+    "programming": {
+     "files": 300,
+     "bytes": 4097276,
+     "tokens": 1114199,
+     "words": 446866,
+     "bytes_per_token": 3.6773,
+     "tokens_per_byte": 0.271937,
+     "tokens_per_word": 2.4934
+    },
+    "spanish": {
+     "files": 9,
+     "bytes": 15886346,
+     "tokens": 3830180,
+     "words": 2620138,
+     "bytes_per_token": 4.1477,
+     "tokens_per_byte": 0.241099,
+     "tokens_per_word": 1.4618
+    },
+    "stem": {
+     "files": 113,
+     "bytes": 4319347,
+     "tokens": 1471012,
+     "words": 658426,
+     "bytes_per_token": 2.9363,
+     "tokens_per_byte": 0.340564,
+     "tokens_per_word": 2.2341
+    },
+    "turkish": {
+     "files": 23,
+     "bytes": 43001577,
+     "tokens": 12474489,
+     "words": 5226872,
+     "bytes_per_token": 3.4472,
+     "tokens_per_byte": 0.290094,
+     "tokens_per_word": 2.3866
+    }
+   }
+  },
+  {
+   "model": "qwen2.5",
+   "n_vocab": 151665,
+   "files": 544,
+   "total_bytes": 207712944,
+   "total_tokens": 62266982,
+   "total_words": 22830490,
+   "bytes_per_token": 3.3358,
+   "tokens_per_byte": 0.299774,
+   "tokens_per_word": 2.7274,
+   "avg_token_len_bytes": 3.3358,
+   "encode_seconds": 97.676,
+   "encode_mb_per_s": 2.13,
+   "decode_exact_files": 541,
+   "decode_mismatch_files": 3,
+   "by_bucket": {
+    "arabic": {
+     "files": 19,
+     "bytes": 40603802,
+     "tokens": 10036851,
+     "words": 4083437,
+     "bytes_per_token": 4.0455,
+     "tokens_per_byte": 0.24719,
+     "tokens_per_word": 2.4579
+    },
+    "chinese": {
+     "files": 18,
+     "bytes": 2953545,
+     "tokens": 1002713,
+     "words": 98426,
+     "bytes_per_token": 2.9456,
+     "tokens_per_byte": 0.339495,
+     "tokens_per_word": 10.1875
+    },
+    "english": {
+     "files": 17,
+     "bytes": 32061792,
+     "tokens": 8120385,
+     "words": 5175796,
+     "bytes_per_token": 3.9483,
+     "tokens_per_byte": 0.253273,
+     "tokens_per_word": 1.5689
+    },
+    "hindi": {
+     "files": 15,
+     "bytes": 29236603,
+     "tokens": 10567749,
+     "words": 2116140,
+     "bytes_per_token": 2.7666,
+     "tokens_per_byte": 0.361456,
+     "tokens_per_word": 4.9939
+    },
+    "japanese": {
+     "files": 7,
+     "bytes": 10140058,
+     "tokens": 2608581,
+     "words": 145947,
+     "bytes_per_token": 3.8872,
+     "tokens_per_byte": 0.257255,
+     "tokens_per_word": 17.8735
+    },
+    "korean": {
+     "files": 14,
+     "bytes": 25256943,
+     "tokens": 8180655,
+     "words": 2242707,
+     "bytes_per_token": 3.0874,
+     "tokens_per_byte": 0.323897,
+     "tokens_per_word": 3.6477
+    },
+    "other_languages": {
+     "files": 9,
+     "bytes": 155655,
+     "tokens": 46483,
+     "words": 15735,
+     "bytes_per_token": 3.3486,
+     "tokens_per_byte": 0.298628,
+     "tokens_per_word": 2.9541
+    },
+    "programming": {
+     "files": 300,
+     "bytes": 4097276,
+     "tokens": 1155072,
+     "words": 446866,
+     "bytes_per_token": 3.5472,
+     "tokens_per_byte": 0.281912,
+     "tokens_per_word": 2.5848
+    },
+    "spanish": {
+     "files": 9,
+     "bytes": 15886346,
+     "tokens": 4453396,
+     "words": 2620138,
+     "bytes_per_token": 3.5672,
+     "tokens_per_byte": 0.280329,
+     "tokens_per_word": 1.6997
+    },
+    "stem": {
+     "files": 113,
+     "bytes": 4319347,
+     "tokens": 1793192,
+     "words": 658426,
+     "bytes_per_token": 2.4087,
+     "tokens_per_byte": 0.415153,
+     "tokens_per_word": 2.7235
+    },
+    "turkish": {
+     "files": 23,
+     "bytes": 43001577,
+     "tokens": 14301905,
+     "words": 5226872,
+     "bytes_per_token": 3.0067,
+     "tokens_per_byte": 0.33259,
+     "tokens_per_word": 2.7362
+    }
+   }
+  },
+  {
+   "model": "bert-multilingual-cased",
+   "n_vocab": 119547,
+   "files": 544,
+   "total_bytes": 207712944,
+   "total_tokens": 54065050,
+   "total_words": 22830490,
+   "bytes_per_token": 3.8419,
+   "tokens_per_byte": 0.260287,
+   "tokens_per_word": 2.3681,
+   "avg_token_len_bytes": 3.8419,
+   "encode_seconds": 73.185,
+   "encode_mb_per_s": 2.84,
+   "decode_exact_files": 0,
+   "decode_mismatch_files": 544,
+   "by_bucket": {
+    "arabic": {
+     "files": 19,
+     "bytes": 40603802,
+     "tokens": 10150814,
+     "words": 4083437,
+     "bytes_per_token": 4.0001,
+     "tokens_per_byte": 0.249997,
+     "tokens_per_word": 2.4859
+    },
+    "chinese": {
+     "files": 18,
+     "bytes": 2953545,
+     "tokens": 966293,
+     "words": 98426,
+     "bytes_per_token": 3.0566,
+     "tokens_per_byte": 0.327164,
+     "tokens_per_word": 9.8175
+    },
+    "english": {
+     "files": 17,
+     "bytes": 32061792,
+     "tokens": 8339073,
+     "words": 5175796,
+     "bytes_per_token": 3.8448,
+     "tokens_per_byte": 0.260094,
+     "tokens_per_word": 1.6112
+    },
+    "hindi": {
+     "files": 15,
+     "bytes": 29236603,
+     "tokens": 4645448,
+     "words": 2116140,
+     "bytes_per_token": 6.2936,
+     "tokens_per_byte": 0.158892,
+     "tokens_per_word": 2.1952
+    },
+    "japanese": {
+     "files": 7,
+     "bytes": 10140058,
+     "tokens": 2837281,
+     "words": 145947,
+     "bytes_per_token": 3.5739,
+     "tokens_per_byte": 0.279809,
+     "tokens_per_word": 19.4405
+    },
+    "korean": {
+     "files": 14,
+     "bytes": 25256943,
+     "tokens": 7449479,
+     "words": 2242707,
+     "bytes_per_token": 3.3904,
+     "tokens_per_byte": 0.294948,
+     "tokens_per_word": 3.3216
+    },
+    "other_languages": {
+     "files": 9,
+     "bytes": 155655,
+     "tokens": 34549,
+     "words": 15735,
+     "bytes_per_token": 4.5053,
+     "tokens_per_byte": 0.221959,
+     "tokens_per_word": 2.1957
+    },
+    "programming": {
+     "files": 300,
+     "bytes": 4097276,
+     "tokens": 1491537,
+     "words": 446866,
+     "bytes_per_token": 2.747,
+     "tokens_per_byte": 0.364031,
+     "tokens_per_word": 3.3378
+    },
+    "spanish": {
+     "files": 9,
+     "bytes": 15886346,
+     "tokens": 4115935,
+     "words": 2620138,
+     "bytes_per_token": 3.8597,
+     "tokens_per_byte": 0.259086,
+     "tokens_per_word": 1.5709
+    },
+    "stem": {
+     "files": 113,
+     "bytes": 4319347,
+     "tokens": 1458966,
+     "words": 658426,
+     "bytes_per_token": 2.9606,
+     "tokens_per_byte": 0.337775,
+     "tokens_per_word": 2.2158
+    },
+    "turkish": {
+     "files": 23,
+     "bytes": 43001577,
+     "tokens": 12575675,
+     "words": 5226872,
+     "bytes_per_token": 3.4194,
+     "tokens_per_byte": 0.292447,
+     "tokens_per_word": 2.406
+    }
+   }
+  }
+ ]
+}

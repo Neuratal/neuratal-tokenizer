@@ -1,0 +1,28 @@
+[package]
+name = "neuratal-tokenizer-fuzz"
+version = "0.0.0"
+publish = false
+edition = "2024"
+
+[package.metadata]
+cargo-fuzz = true
+
+[dependencies]
+libfuzzer-sys = "0.4"
+
+[dependencies.neuratal-tokenizer]
+path = ".."
+
+[[bin]]
+name = "roundtrip"
+path = "fuzz_targets/roundtrip.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "load_model"
+path = "fuzz_targets/load_model.rs"
+test = false
+doc = false
+bench = false
