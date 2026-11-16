@@ -319,6 +319,37 @@ or see `CITATION.cff`.
 See `CONTRIBUTING.md`, `SUPPORT.md` and `CODE_OF_CONDUCT.md`. Bug reports, Unicode edge
 cases, benchmark contributions and documentation fixes are especially welcome.
 
+## FAQ — honest answers to reasonable skepticism
+
+NTokenizer is new and independent. We know why you'd hesitate; here are the questions we'd ask in your place, answered with evidence you can check yourself.
+
+### "Why should I trust an unknown tokenizer over OpenAI's, Meta's or Google's?"
+You shouldn't — *trust nothing, verify.* Every NTokenizer artifact is SHA-256-pinned; every benchmark number in the docs is reproducible by running one command (`./target/release/examples/benchmark_ntok --model output/v0.3/ntokenizer-0.3-256k.ntok --manifest <manifest>`); the model round-trips arbitrary bytes byte-exactly (544/544 on the development benchmark); 136/136 tests pass; ~1.0M fuzz cases ran without a crash. Nothing about this project asks you to believe a brand. If verification takes 15 minutes, do it — if it doesn't check out, don't use it.
+
+### "Is the benchmark legit, or was it tuned to make NTokenizer win?"
+It's the same 544 files, 207,712,944 bytes, used unchanged for every candidate, external tokenizers included; files and manifest are untouched (SHA-pinned). It is a **development/validation set used throughout development** — not a blind test — and we say so everywhere. Different slices of it will weight differently: English (NTokenizer beats o200k by +6.9%), programming (+10.2%), STEM (+17.6%), Turkish (+35.0%), Arabic (+33.8%), Hindi (+27.1%), Korean (+34.7%), Chinese (+22.3%), Japanese (+31.7%) fewer tokens than o200k_base. If you need numbers for *your* domain, run the harness on your own files — it takes minutes.
+
+### "Does higher B/T mean the language model will be better?"
+**No — and we say this in every public page.** B/T is compression density. It tells you how many tokens you pay for the same bytes. It does not measure next-token loss, task accuracy, fairness or safety. No 50M language model exists yet, and nothing in this repository should be read as a claim that NTokenizer produces better LLMs. What it does demonstrate, carefully scoped, is that NTokenizer compresses multilingual and technical text more efficiently than every public competitor we could measure — e.g. **26.6% fewer tokens than o200k_base, 39.9% fewer than Qwen2.5-7B-Instruct, 50.2% fewer than cl100k_base, 57.2% fewer than Mistral-7B, 59.3% fewer than Llama-2-class, 63.9% fewer than Falcon-7b and 64.5% fewer than GPT-2** (per-file evidence in `reports/public-benchmark/STANDARDIZED_RESULTS.csv`).
+
+### "What are you hiding? What are the known weaknesses?"
+Nothing by design; the weaknesses are documented rather than discovered late: `other_languages` (0.16 MB) loses to o200k_base (3.32 vs 5.19); Chinese and Japanese are improved over v0.2 but Han-chunking candidates were rejected (Japanese regression) and pure Han efficiency is still imperfect; Gemini 3.8 Flash and MosaicML MPT are marked NOT MEASURED (no credential / unavailable models); the 6.00 B/T target was not achieved (the v0.4-v2 cycle is archived, not promoted); the HF export has 3/16 token-ID parity (documented); ASAN-instrumented fuzzing remains blocked (disclosed, not claimed as done).
+
+### "Why is English's gain smaller than the other languages?"
+English is where the vendor tokenizers concentrate their training; o200k is genuinely strong there, and +6.9% is what an independent multilingual corpus buys. The NTokenizer edge is elsewhere: STEM (+17.6%), code (+10.2%), and the long tail of multilingual technical text — Turkish (+35.0%), Arabic (+33.8%), Hindi (+27.1%), Korean (+34.7%). If your corpus is pure English news, you will not see a dramatic difference; if it is mixed-language or code-heavy, you will see a large one.
+
+### "Is it safe / stable on weird inputs?"
+Byte-level by construction: *any* byte sequence — invalid UTF-8 included — is recoverable exactly (`decode_bytes(encode_bytes(x)) == x`), decoding never fabricates bytes, and the training-time guarantee (136 tests, ~1M fuzz cases, zero crashes) is enforced by CI-style local verification. Combining marks, ZWJ sequences, variation selectors, Arabic harakat, Devanagari matras, planar CJK, unassigned scalars — all round-trip byte-exactly; the regression suite covers 30 adversarial samples × 12 pre-tokenizer modes.
+
+### "Why is it not famous?"
+It is brand-new, independent and distributed under a model license (CC BY-SA 4.0) that doesn't allow advertising without care. Fame requires time and backing this project doesn't have — that is an honest constraint, not a hidden disqualifier. Fame has never been evidence of quality; in this space, it is usually marketing backstopped by a large corpus. Here, the correct evaluation is two commands and 15 minutes of your time.
+
+### "Can I use it commercially?"
+Source code: MIT OR Apache-2.0 — free for any use, including commercial, with no copyleft. The trained model artifact: CC BY-SA 4.0 — you may use it commercially; adaptations (e.g., redistributed fine-tuned variants of the tokenizer) must be distributed under CC BY-SA 4.0 with attribution. Training corpora are not redistributed. This is a summary, not legal advice; consult counsel for your case.
+
+### "Should I switch from o200k_base today?"
+You should try NTokenizer on your own data first — that is the only honest answer. If your workload is multilingual, STEM, code or Turkish/Arabic/Hindi/Korean-heavy, expect meaningful token-count reduction and thus cost/throughput gains (independent of any downstream LM claim). If it is monolingual English, o200k is a solid, battle-tested choice and the improvement will be modest. Nothing about either choice is irreversible — the harness prints the numbers for your files in one command.
+
 ## Links
 
 - GitHub: <https://github.com/Neuratal/neuratal-tokenizer>
