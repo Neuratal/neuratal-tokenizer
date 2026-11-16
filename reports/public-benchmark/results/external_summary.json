@@ -1,0 +1,29 @@
+{
+  "benchmark": "data/v0.2/manifest/manifest_benchmark.json",
+  "benchmark_sha256": "002a8224671cd281312e059af85dad24c269e7a3945e55724d476e3e255103c8",
+  "date": "2026-11-16T10:23:29.300361+00:00",
+  "o200k_base": {
+    "name": "o200k_base",
+    "lib": "tiktoken 0.14.0",
+    "revision": "tiktoken built-in rank file (downloaded by tiktoken at first use; version pinned)",
+    "special_tokens": "allowed_special=set() (special strings encoded as ordinary text)",
+    "decode_tested": false,
+    "files": 544,
+    "tokens": 50971306,
+    "seconds": 9.776098489761353,
+    "failures": []
+  },
+  "qwen25_7b_instruct": {
+    "name": "Qwen/Qwen2.5-7B-Instruct (tokenizer.json)",
+    "lib": "tokenizers 0.23.3",
+    "revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+    "tokenizer_json_sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+    "special_tokens": "add_special_tokens=False (raw text only)",
+    "vocab_size": 151665,
+    "decode_tested": false,
+    "files": 544,
+    "tokens": 62266982,
+    "seconds": 81.64590454101562,
+    "failures": []
+  }
+}

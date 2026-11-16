@@ -1,0 +1,171 @@
+{
+  "buckets": {
+    "arabic": {
+      "bytes": 40603802,
+      "bytes_per_token": 7.181962933221074,
+      "files": 19,
+      "tokens": 5653580,
+      "tokens_per_byte": 0.13923769995726015,
+      "tokens_per_word": 1.3845150543524976,
+      "words": 4083437
+    },
+    "chinese": {
+      "bytes": 2953545,
+      "bytes_per_token": 3.65572133022413,
+      "files": 18,
+      "tokens": 807924,
+      "tokens_per_byte": 0.27354382614790024,
+      "tokens_per_word": 8.20844085912259,
+      "words": 98426
+    },
+    "english": {
+      "bytes": 32061792,
+      "bytes_per_token": 4.455074144492239,
+      "files": 17,
+      "tokens": 7196691,
+      "tokens_per_byte": 0.22446315539692854,
+      "tokens_per_word": 1.3904510533259038,
+      "words": 5175796
+    },
+    "hindi": {
+      "bytes": 29236603,
+      "bytes_per_token": 9.907498821568732,
+      "files": 15,
+      "tokens": 2950957,
+      "tokens_per_byte": 0.10093364813962825,
+      "tokens_per_word": 1.394499891311539,
+      "words": 2116140
+    },
+    "japanese": {
+      "bytes": 10140058,
+      "bytes_per_token": 4.9827780646981035,
+      "files": 7,
+      "tokens": 2035021,
+      "tokens_per_byte": 0.20069125837347282,
+      "tokens_per_word": 13.943561703906212,
+      "words": 145947
+    },
+    "korean": {
+      "bytes": 25256943,
+      "bytes_per_token": 5.039634157291533,
+      "files": 14,
+      "tokens": 5011662,
+      "tokens_per_byte": 0.19842710180721396,
+      "tokens_per_word": 2.2346485742453206,
+      "words": 2242707
+    },
+    "other_languages": {
+      "bytes": 155655,
+      "bytes_per_token": 3.303023872679045,
+      "files": 9,
+      "tokens": 47125,
+      "tokens_per_byte": 0.30275288297838165,
+      "tokens_per_word": 2.9949157928185572,
+      "words": 15735
+    },
+    "programming": {
+      "bytes": 4097276,
+      "bytes_per_token": 4.088710152231076,
+      "files": 300,
+      "tokens": 1002095,
+      "tokens_per_byte": 0.24457590848163513,
+      "tokens_per_word": 2.2424955131963498,
+      "words": 446866
+    },
+    "spanish": {
+      "bytes": 15886346,
+      "bytes_per_token": 4.7261619765553435,
+      "files": 9,
+      "tokens": 3361363,
+      "tokens_per_byte": 0.21158817767156776,
+      "tokens_per_word": 1.282895404745857,
+      "words": 2620138
+    },
+    "stem": {
+      "bytes": 4319347,
+      "bytes_per_token": 3.5557790144393038,
+      "files": 113,
+      "tokens": 1214740,
+      "tokens_per_byte": 0.28123232516396574,
+      "tokens_per_word": 1.8449149942438483,
+      "words": 658426
+    },
+    "turkish": {
+      "bytes": 43001577,
+      "bytes_per_token": 5.292429481886463,
+      "files": 23,
+      "tokens": 8125111,
+      "tokens_per_byte": 0.18894914016758035,
+      "tokens_per_word": 1.5544882292889515,
+      "words": 5226872
+    }
+  },
+  "decode": {
+    "checked": true,
+    "failed_files": 0,
+    "mb_per_s": 1837.830282181033,
+    "ok_files": 544,
+    "seconds": 0.113020743
+  },
+  "label": "v0.4-fail-han4",
+  "latency": {
+    "max_ms": 465.543228,
+    "median_ms": 1.595794,
+    "p95_ms": 256.123445,
+    "scope": "per-file wall time within the measured pass (parallel contention applies when threads > 1)"
+  },
+  "load_seconds": 0.362165754,
+  "manifest": "data/v0.2/manifest/manifest_benchmark.json",
+  "median_mb_per_s": 64.1064677669255,
+  "median_seconds": 3.240124612,
+  "median_tokens_per_s": 11544700.738194942,
+  "merges": 261881,
+  "metadata": {
+    "corpus_bytes": 1963480352,
+    "corpus_manifest_sha256": "2b5a5c523d28b76aa11c371c312814be400cce82d95a0ec37c989b0a7a2cc186",
+    "corpus_records": 20041192,
+    "format_version": 3,
+    "min_frequency": 2,
+    "model_name": "final-RELEASE_math_cjkhan4_256k",
+    "model_version": "0.3.0",
+    "pretokenizer_mode": "MathSymbolAwareCjkHan4",
+    "seed": 42,
+    "training_cli": "ntokenizer train --manifest data/v0.3/manifest/manifest_corpus.json --vocab-size 262144 --min-freq 2 --min-word-freq 2 --pretokenizer cjkhan4 --seed 42 --output experiments/v0.4-fail/models/final-RELEASE_math_cjkhan4_256k.ntok",
+    "training_finished_at": "2026-11-15T18:06:42Z",
+    "training_started_at": "2026-11-15T17:59:39Z"
+  },
+  "model_bytes": 23323368,
+  "model_path": "experiments/v0.4-fail/models/final-RELEASE_math_cjkhan4_256k.ntok",
+  "model_sha256": "213b20d4d3af8327846c5b43d6e47e1a73dcfd85ba3df8bb4c7c2fdcaf7276a9",
+  "peak_rss_kb": 1244744,
+  "pretokenizer": "MathSymbolAwareCjkHan4",
+  "repeats": [
+    {
+      "bytes": 207712944,
+      "mb_per_s": 64.1064677669255,
+      "peak_rss_kb": 702044,
+      "repeat": 1,
+      "seconds": 3.240124612,
+      "tokens": 37406269,
+      "tokens_per_s": 11544700.738194942
+    }
+  ],
+  "threads": 8,
+  "totals": {
+    "bytes": 207712944,
+    "bytes_per_token": 5.552891254671777,
+    "categories": 11,
+    "equal_category_bytes_per_token": 5.108070359026095,
+    "files": 544,
+    "manifest_total_words": 22830490,
+    "tokens": 37406269,
+    "tokens_per_byte": 0.1800863647669449,
+    "tokens_per_word": 1.6384347861127817,
+    "unused_vocab": 16601,
+    "used_vocab": 245543,
+    "vocab_usage_pct": 93.66722106933594,
+    "words": 22830490
+  },
+  "vocab_size": 262144,
+  "warmup_seconds": 0.0
+}

@@ -1,0 +1,158 @@
+{
+  "buckets": {
+    "arabic": {
+      "bytes": 40603802,
+      "bytes_per_token": 3.7455281106004388,
+      "files": 19,
+      "tokens": 10840608,
+      "tokens_per_byte": 0.26698504736083584,
+      "tokens_per_word": 2.654775376723089,
+      "words": 4083437
+    },
+    "chinese": {
+      "bytes": 2953545,
+      "bytes_per_token": 2.640993932110456,
+      "files": 18,
+      "tokens": 1118346,
+      "tokens_per_byte": 0.37864532282392854,
+      "tokens_per_word": 11.362302643610429,
+      "words": 98426
+    },
+    "english": {
+      "bytes": 32061792,
+      "bytes_per_token": 2.6161578948270288,
+      "files": 17,
+      "tokens": 12255297,
+      "tokens_per_byte": 0.3822399259529848,
+      "tokens_per_word": 2.367809125398296,
+      "words": 5175796
+    },
+    "hindi": {
+      "bytes": 29236603,
+      "bytes_per_token": 5.741582468935588,
+      "files": 15,
+      "tokens": 5092081,
+      "tokens_per_byte": 0.1741680112426194,
+      "tokens_per_word": 2.4063062935344544,
+      "words": 2116140
+    },
+    "japanese": {
+      "bytes": 10140058,
+      "bytes_per_token": 3.4189025115977345,
+      "files": 7,
+      "tokens": 2965881,
+      "tokens_per_byte": 0.29249152223784125,
+      "tokens_per_word": 20.32163045489116,
+      "words": 145947
+    },
+    "korean": {
+      "bytes": 25256943,
+      "bytes_per_token": 2.440595140521276,
+      "files": 14,
+      "tokens": 10348682,
+      "tokens_per_byte": 0.4097361268147139,
+      "tokens_per_word": 4.61437093655123,
+      "words": 2242707
+    },
+    "other_languages": {
+      "bytes": 155655,
+      "bytes_per_token": 2.9055290076905846,
+      "files": 9,
+      "tokens": 53572,
+      "tokens_per_byte": 0.3441714047091324,
+      "tokens_per_word": 3.4046393390530665,
+      "words": 15735
+    },
+    "programming": {
+      "bytes": 4097276,
+      "bytes_per_token": 2.662299325730556,
+      "files": 300,
+      "tokens": 1538999,
+      "tokens_per_byte": 0.3756151648070572,
+      "tokens_per_word": 3.443983207493969,
+      "words": 446866
+    },
+    "spanish": {
+      "bytes": 15886346,
+      "bytes_per_token": 2.647634313766665,
+      "files": 9,
+      "tokens": 6000204,
+      "tokens_per_byte": 0.3776956639368172,
+      "tokens_per_word": 2.290033578384039,
+      "words": 2620138
+    },
+    "stem": {
+      "bytes": 4319347,
+      "bytes_per_token": 2.3174998765959365,
+      "files": 113,
+      "tokens": 1863796,
+      "tokens_per_byte": 0.43149948360249823,
+      "tokens_per_word": 2.830684085986884,
+      "words": 658426
+    },
+    "turkish": {
+      "bytes": 43001577,
+      "bytes_per_token": 3.1862944717224884,
+      "files": 23,
+      "tokens": 13495795,
+      "tokens_per_byte": 0.31384418762130517,
+      "tokens_per_word": 2.582002199403391,
+      "words": 5226872
+    }
+  },
+  "decode": {
+    "checked": true,
+    "failed_files": 0,
+    "mb_per_s": 1402.0655154308859,
+    "ok_files": 544,
+    "seconds": 0.148147816
+  },
+  "label": "v0.1",
+  "latency": {
+    "max_ms": 255.73160700000003,
+    "median_ms": 0.966988,
+    "p95_ms": 138.731236,
+    "scope": "per-file wall time within the measured pass (parallel contention applies when threads > 1)"
+  },
+  "load_seconds": 0.355731462,
+  "manifest": "data/v0.2/manifest/manifest_benchmark.json",
+  "median_mb_per_s": 115.11255489946873,
+  "median_seconds": 1.804433445,
+  "median_tokens_per_s": 36340082.91173078,
+  "merges": 261881,
+  "metadata": null,
+  "model_bytes": 22224561,
+  "model_path": "output/ntokenizer-256k.ntok",
+  "model_sha256": "8abe252f159ed58a1a0072eaac0f9861dab74b4e6bed5da9b69a218493662f00",
+  "peak_rss_kb": 789140,
+  "pretokenizer": "ConservativeUnicode",
+  "repeats": [
+    {
+      "bytes": 207712944,
+      "mb_per_s": 115.11255489946873,
+      "peak_rss_kb": 426040,
+      "repeat": 1,
+      "seconds": 1.804433445,
+      "tokens": 65573261,
+      "tokens_per_s": 36340082.91173078
+    }
+  ],
+  "threads": 8,
+  "totals": {
+    "bytes": 207712944,
+    "bytes_per_token": 3.167647007825339,
+    "categories": 11,
+    "equal_category_bytes_per_token": 3.1202742776453407,
+    "files": 544,
+    "manifest_total_words": 22830490,
+    "tokens": 65573261,
+    "tokens_per_byte": 0.31569174138709427,
+    "tokens_per_word": 2.8721793093358925,
+    "unused_vocab": 50160,
+    "used_vocab": 211984,
+    "vocab_usage_pct": 80.865478515625,
+    "words": 22830490
+  },
+  "vocab_size": 262144,
+  "warmup_seconds": 0.0
+}

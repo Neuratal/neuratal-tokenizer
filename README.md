@@ -50,6 +50,60 @@ Key properties:
 | Source code license | MIT OR Apache-2.0 |
 | Model license | CC BY-SA 4.0 (inherits ShareAlike from training data; see [Licensing](#licensing)) |
 
+## Tokenizer Benchmark — NTokenizer vs Leading Tokenizers
+
+**Development/validation benchmark — not a pristine blind evaluation set.** 544 files,
+207,712,944 bytes, identical raw bytes, no normalization, no chat templates for any
+candidate. **Bold** = higher B/T (fewer tokens per input byte) than the comparator;
+equal-category B/T = arithmetic mean of the 11 bucket-level B/Ts.
+`**Bold**` on a NTokenizer value means it strictly beats the comparator — never bold by default.
+
+| Tokenizer (reference) | Vocabulary | Tokens | Overall B/T | Equal-category B/T | Token reduction vs o200k |
+|---|---:|---:|---:|---:|---:|
+| NTokenizer v0.1 | 262,144 | 65,573,261 | 3.1676 | 3.1203 | −28.65% |
+| NTokenizer v0.2 | 262,144 | 42,140,674 | 4.9290 | 4.6855 | +17.32% |
+| NTokenizer v0.3-original (historical) | 262,144 | 37,397,108 | 5.5543 | 5.1057 | +26.63% |
+| **NTokenizer v0.3-polished (official)** | 262,144 | **37,397,319** | **5.5542** | **5.1056** | **+26.63%** |
+| NTokenizer v0.4-fail (CJK8, archived) | 262,144 | 37,418,652 | 5.5511 | 5.1031 | +26.59% |
+| NTokenizer v0.4-fail (Han4, archived) | 262,144 | 37,406,269 | 5.5529 | 5.1081 | +26.61% |
+| o200k_base | 200,019 | 50,971,306 | 4.0751 | 4.0899 | 0.00% |
+| Qwen2.5-7B-Instruct tokenizer | 151,665 | 62,266,982 | 3.3358 | 3.3236 | −22.16% |
+| Gemini 3.8 Flash | n/a | NOT MEASURED | — | — | — |
+
+**NTokenizer v0.3-polished wins 10 of 11 categories against o200k_base and against
+Qwen2.5-7B-Instruct** (both: loses only the tiny 0.16 MB `other_languages` bucket);
+Turkish +35.0%, Arabic +33.8%, Hindi +27.1%, Korean +34.7%, Japanese +31.7%, Chinese
++22.3% fewer tokens than o200k_base. Full details, losses and methodology:
+[`reports/public-benchmark/COMPARISON_REPORT.md`](reports/public-benchmark/COMPARISON_REPORT.md).
+
+> **B/T measures compression efficiency, not language-model quality.** No downstream
+> 50M-language-model evaluation exists yet. o200k_base ≈ 4.08; Qwen2.5 ≈ 3.34;
+> NTokenizer v0.3-polished ≈ 5.55 on this development set — do not read this as proof
+> of downstream superiority.
+
+### Per-category B/T (same 544 files; wins in **bold**)
+
+| Category | v0.3-polished | o200k_base | Qwen2.5-7B | Gemini | Best |
+|---|---:|---:|---:|---|---|
+| English | **4.4628** | 4.1537 | 3.9483 | — | **4.4628** NTokenizer |
+| Turkish | **5.3054** | 3.4472 | 3.0067 | — | **5.3054** NTokenizer |
+| Arabic | **7.1984** | 4.7628 | 4.0455 | — | **7.1984** NTokenizer |
+| Hindi | **9.9277** | 7.2370 | 2.7666 | — | **9.9277** NTokenizer |
+| Korean | **4.9999** | 3.2668 | 3.0874 | — | **5.0396** v0.4-fail-Han4 |
+| Spanish | **4.7363** | 4.1477 | 3.5672 | — | **4.7363** NTokenizer |
+| Japanese | **5.0135** | 3.4240 | 3.8872 | — | **5.0135** NTokenizer |
+| Chinese | **3.5380** | 2.7483 | 2.9456 | — | **3.6557** v0.4-fail-Han4 |
+| STEM / Math | **3.5638** | 2.9363 | 2.4087 | — | **3.5638** NTokenizer |
+| Programming | **4.0961** | 3.6773 | 3.5472 | — | **4.0961** NTokenizer |
+| Other languages | 3.3196 | **5.1876** | 3.3486 | — | **5.1876** o200k_base |
+
+Legend: **bold** = higher B/T (fewer tokens per input byte) than the comparison tokenizer.
+Method, versions, hashes, scripts and limitations: `reports/public-benchmark/`. Gemini
+3.8 Flash is **not measured** — no Gemini API credential exists in this environment
+(`LLM_API_KEY` is the placeholder `"local"`), and no estimate was substituted.
+Historical values (v0.1 3.1676, v0.2 4.9290, v0.3-original 5.5543) and the +211-token
+polished-tree note are preserved in `reports/public-benchmark/HISTORICAL_RESULTS.csv`.
+
 ## Architecture
 
 ```
@@ -165,20 +219,7 @@ see `docs/training.md`. Training corpora are **not** included in this repository
 
 ## Benchmarks
 
-Development/validation benchmark (544 files, 207,712,944 bytes; **not** a pristine
-blind set):
-
-| Model | Tokens | Overall B/T | Equal-category B/T | Decode |
-|---|---:|---:|---:|---|
-| NTokenizer v0.3-polished (current) | 37,397,319 | **5.5542** | **5.1056** | 544/544 exact |
-| NTokenizer v0.3 (original report) | 37,397,108 | 5.5543 | 5.1057 | 544/544 exact |
-| NTokenizer v0.2 | 42,140,653 | 4.9290 | 4.6857 | 544/544 exact |
-| o200k_base (external reference) | 50,971,306 | 4.0751 | 4.0899 | n/a |
-
-The historical 37,397,108-token figure and the polished-tree 37,397,319-token figure
-differ by +211 tokens on 24 files (+0.00056%); the cause is a pre-existing source-tree
-drift that predates the polishing release and was verified not to come from the
-Unicode-loss fix. Both are recorded; nothing is hidden.
+See [Tokenizer Benchmark — NTokenizer vs Leading Tokenizers](#tokenizer-benchmark--ntokenizer-vs-leading-tokenizers) for the headline comparison. Full artifact trail: [`reports/public-benchmark/`](reports/public-benchmark/) — inputs (metadata only, no corpus text), scripts, CSVs, environment and methodology. The historical v0.3 numbers (37,397,108 / 5.5543) are reproduced exactly by a build of the pre-polish source; the polished-tree figure is 37,397,319 / 5.5542 (+211 tokens, +0.00056%, pre-existing source drift — both preserved).
 
 Encode/decode throughput (same machine, interleaved A/B, indicative only):
 
@@ -189,17 +230,7 @@ Encode/decode throughput (same machine, interleaved A/B, indicative only):
 | Peak encode RSS | 415 MB | 360 MB |
 | Decode throughput | not recorded | 160–278 MB/s |
 
-Per-bucket B/T (polished model): Hindi 9.93 · Arabic 7.20 · Turkish 5.31 · Korean 5.00 ·
-Japanese 5.01 · Spanish 4.74 · English 4.46 · Programming 4.10 · STEM 3.56 ·
-Chinese 3.54 · Other languages 3.32.
-
-**Correctness guarantees that are actually tested:** byte-exact encode/decode round-trip
-on the benchmark (544/544); multilingual adversarial Unicode regression suite
-(leading combining marks, Devanagari/Arabic marks, emoji ZWJ sequences, variation
-selectors, skin tones, flags, mixed scripts, unusual whitespace) across all 12
-pre-tokenizer modes; ~924K model-loading and round-trip fuzz runs with zero crashes
-(the ASAN-instrumented fuzz build is blocked by a pre-existing linker issue and was not
-completed — it is not claimed). ASAN-sanitized fuzzing remains an open item.
+**Correctness guarantees that are actually tested:** byte-exact encode/decode round-trip on the benchmark (544/544); multilingual adversarial Unicode regression suite (leading combining marks, Devanagari/Arabic marks, emoji ZWJ sequences, variation selectors, skin tones, flags, mixed scripts, unusual whitespace) across all 12 pre-tokenizer modes; ~924K model-loading and round-trip fuzz runs with zero crashes (the ASAN-instrumented fuzz build is blocked by a pre-existing linker issue and was not completed — it is not claimed). ASAN-sanitized fuzzing remains an open item.
 
 ## Known limitations
 
