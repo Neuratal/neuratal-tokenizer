@@ -80,3 +80,26 @@ All historical figures survive in `HISTORICAL_RESULTS.csv`; none were replaced o
 - **What it does not beat:** o200k on the tiny `other_languages` bucket; its own Han4-arm sibling on chinese and korean (internal experiments); Gemini-3.8-Flash (unmeasured); and nothing about this establishes downstream LM superiority.
 - **Is it globally better on compression?** On this development benchmark, yes — decisively on every major multilingual category and code/STEM, narrowly not universal (one small bucket loses; Gemini unknown; the benchmark is a development set).
 - **Why this proves nothing about LM quality:** B/T counts bytes per token. It does not measure next-token loss, downstream task accuracy, multilingual fairness of LM behavior, or any model-level property. No 50M language model has been trained yet; tokenizer choice must be validated with downstream evaluation before claims about model quality are made.
+
+## Addendum (2026-11-16, same day)
+
+Competitor set expanded on owner request to cover the wider public tokenizer landscape, measured on the identical benchmark (raw text, `add_special_tokens=False` / tiktoken `allowed_special=set()`; 0 file failures):
+
+| Tokenizer | Vocab | Tokens | B/T | Equal-cat |
+|---|---:|---:|---:|---:|
+| Bloom-7b1 | 250,680 | 54,773,073 | 3.7922 | 4.1584 |
+| cl100k_base | 100,256 | 75,061,973 | 2.7672 | 2.8566 |
+| Mistral-7B-Instruct-v0.2 | 32,000 | 87,276,011 | 2.3800 | 2.4943 |
+| Llama-2-7b (NousResearch mirror) | 32,000 | 91,853,794 | 2.2613 | 2.3985 |
+| CodeLlama-7b | 32,016 | 91,853,791 | 2.2613 | 2.3985 |
+| StableLM-base-alpha-3b | 50,277 | 83,207,383 | 2.4963 | 2.6430 |
+| DeepSeek-LLM-7b-base | 100,015 | 93,334,847 | 2.2255 | 2.4470 |
+| DeepSeek-Coder-6.7b-base | 32,022 | 116,855,033 | 1.7775 | 2.1074 |
+| Falcon-7b | 65,024 | 103,640,810 | 2.0042 | 2.3126 |
+| GPT-2 (r50k_base) | 50,256 | 105,229,579 | 1.9739 | 2.1406 |
+
+- **MosaicML MPT — NOT MEASURED**: all candidate repositories return 401/404 from the Hugging Face hub API.
+- **Gemini 3.8 Flash — NOT MEASURED**: no API credential available; no estimate substituted.
+- All newly measured models were re-verified to decode successfully on 544/544 *where decode was exercised*; external tokenizers' decode exactness was not measured in this audit (they parse text here). NTokenizer models: 544/544 byte-exact.
+- Ranking after expansion (this development benchmark): v0.3-original ≈ v0.3-polished > v0.4-fail-han4 > v0.4-fail-cjk8 > v0.2 > o200k (4.0751) > Bloom (3.7922) > Qwen2.5-7B (3.3358) > cl100k > StableLM > Mistral > Llama-2 ≈ CodeLlama > DeepSeek-LLM > Falcon > GPT-2 > DeepSeek-Coder.
+- No change to the official model, the v0.3.0 tag, or any promoted artifact. Documentation only.

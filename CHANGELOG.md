@@ -235,6 +235,15 @@ Unreleased development history (kept for honesty, not published):
 - Project renamed to Neuratal Tokenizer in 0.2.0; model format v2 with v1
   compatibility introduced at the same time.
 
+## [Unreleased] — 2026-11-16 — Public benchmark audit v0.3-polished (publication docs)
+
+Public comparison expanded to a wider competitor set (Bloom, Mistral, Llama-2/CodeLlama,
+StableLM, DeepSeek-LLM/Coder, Falcon, cl100k/GPT-2), all measured on the identical
+544-file development benchmark. MosaicML MPT and Gemini 3.8 Flash are marked NOT MEASURED
+(models unavailable/no credential). GitHub README and HF model card now show the identical
+standardized comparison and a property/landscape table; `reports/public-benchmark/` is the
+public audit trail (methodology, CSVs, pinned references, FINAL_AUDIT_REPORT.md addendum).
+
 ## [Unreleased] — 2026-11-16 — NTokenizer v0.4-v2: targeted quality cycle — NOT PROMOTED
 
 Goal was overall B/T strictly > 6.00 (polished v0.3-v2 measures 5.5542). Not achieved and
