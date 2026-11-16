@@ -1,0 +1,121 @@
+{
+  "date": "2026-11-16T11:17:42.644639+00:00",
+  "benchmark": "data/v0.2/manifest/manifest_benchmark.json",
+  "results": {
+    "tiktoken_r50k_gpt2": {
+      "name": "GPT-2 (r50k_base)",
+      "lib": "tiktoken 0.14.0",
+      "revision": "r50k_base",
+      "special_tokens": "allowed_special=set()",
+      "vocab_size": 50256,
+      "decode_tested": false,
+      "files": 544,
+      "tokens": 105229579,
+      "seconds": 14.339147329330444,
+      "failures": []
+    },
+    "tiktoken_cl100k_base": {
+      "name": "OpenAI cl100k_base",
+      "lib": "tiktoken 0.14.0",
+      "revision": "cl100k_base",
+      "special_tokens": "allowed_special=set()",
+      "vocab_size": 100256,
+      "decode_tested": false,
+      "files": 544,
+      "tokens": 75061973,
+      "seconds": 15.193927764892578,
+      "failures": []
+    },
+    "mistral_7b_instruct_v02": {
+      "name": "mistralai/Mistral-7B-Instruct-v0.2 @63a8b08",
+      "lib": "tokenizers 0.23.3",
+      "revision": "63a8b081895390a26e140280378bc85ec8bce07a",
+      "tokenizer_json_sha256": "11c08db21487c885d8c792180f0be237f6a261b89a46f128a6a80a3aa4bd1720",
+      "special_tokens": "add_special_tokens=False",
+      "vocab_size": 32000,
+      "decode_tested": false,
+      "files": 544,
+      "tokens": 87276011,
+      "seconds": 70.79562139511108,
+      "failures": []
+    },
+    "llama2_7b_hf": {
+      "name": "NousResearch/Llama-2-7b-hf @8efe6c9 (community mirror, Llama 2 Community License)",
+      "lib": "tokenizers 0.23.3",
+      "revision": "8efe6c9b93655b934e27bd9981e3ec13e55aee9d",
+      "tokenizer_json_sha256": "f7b50bcf6d6672eade5e43514d48e9c1e4e63a56aef7b14acdaca94ce93436f7",
+      "special_tokens": "add_special_tokens=False",
+      "vocab_size": 32000,
+      "decode_tested": false,
+      "files": 544,
+      "tokens": 91853794,
+      "seconds": 72.57148146629333,
+      "failures": []
+    },
+    "codellama_7b_hf": {
+      "name": "codellama/CodeLlama-7b-hf @6c284d1 (Llama 2 Community License)",
+      "lib": "tokenizers 0.23.3",
+      "revision": "6c284d1468fe6c413cf56183e69b194dcfa27fe6",
+      "tokenizer_json_sha256": "dcb4337ba92f948b322e080f8b59a2a21cfe65dc2aa7ecf7df080ae8aa63c157",
+      "special_tokens": "add_special_tokens=False",
+      "vocab_size": 32016,
+      "decode_tested": false,
+      "files": 544,
+      "tokens": 91853791,
+      "seconds": 74.58550143241882,
+      "failures": []
+    },
+    "bloom_7b1": {
+      "name": "bigscience/bloom-7b1 @6232703 (BigScience Open RAIL)",
+      "lib": "tokenizers 0.23.3",
+      "revision": "6232703e399354503377bf59dfbb8397fd569e4a",
+      "tokenizer_json_sha256": "3fa39cd4b1500feb205bcce3b9703a4373414cafe4970e0657b413f7ddd2a9d3",
+      "special_tokens": "add_special_tokens=False",
+      "vocab_size": 250680,
+      "decode_tested": false,
+      "files": 544,
+      "tokens": 54773073,
+      "seconds": 84.55772376060486,
+      "failures": []
+    },
+    "stablelm_base_alpha_3b": {
+      "name": "stabilityai/stablelm-base-alpha-3b @819657d (CC BY-SA 4.0)",
+      "lib": "tokenizers 0.23.3",
+      "revision": "819657db42861818efac86e8ca60f673fa912ef8",
+      "tokenizer_json_sha256": "3cf430678137c8491ca82fb7092ee49e44ad38857fffe1e4a4a5ed860139a5b8",
+      "special_tokens": "add_special_tokens=False",
+      "vocab_size": 50277,
+      "decode_tested": false,
+      "files": 544,
+      "tokens": 83207383,
+      "seconds": 78.54437184333801,
+      "failures": []
+    },
+    "deepseek_llm_7b_base": {
+      "name": "deepseek-ai/deepseek-llm-7b-base @7683fea (license: other)",
+      "lib": "tokenizers 0.23.3",
+      "revision": "7683fea62db869066ddaff6a41d032262c490d4f",
+      "tokenizer_json_sha256": "a08b02921f08548065a7b2ec13b2ffeed873231add60f9c3c7b08b04f2cc212a",
+      "special_tokens": "add_special_tokens=False",
+      "vocab_size": 100015,
+      "decode_tested": false,
+      "files": 544,
+      "tokens": 93334847,
+      "seconds": 134.47749257087708,
+      "failures": []
+    },
+    "deepseek_coder_6.7b_base": {
+      "name": "deepseek-ai/deepseek-coder-6.7b-base @ce2207a (license: other)",
+      "lib": "tokenizers 0.23.3",
+      "revision": "ce2207a8bfef3ee92bd7dd4cc31c52cfa0046912",
+      "tokenizer_json_sha256": "ef48ebdc8546c2d8092349d321f1d162de804a1c8900df2b615c7dc8b02ce141",
+      "special_tokens": "add_special_tokens=False",
+      "vocab_size": 32022,
+      "decode_tested": false,
+      "files": 544,
+      "tokens": 116855033,
+      "seconds": 124.45813536643982,
+      "failures": []
+    }
+  }
+}

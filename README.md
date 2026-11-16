@@ -66,9 +66,38 @@ equal-category B/T = arithmetic mean of the 11 bucket-level B/Ts.
 | **NTokenizer v0.3-polished (official)** | 262,144 | **37,397,319** | **5.5542** | **5.1056** | **+26.63%** |
 | NTokenizer v0.4-fail (CJK8, archived) | 262,144 | 37,418,652 | 5.5511 | 5.1031 | +26.59% |
 | NTokenizer v0.4-fail (Han4, archived) | 262,144 | 37,406,269 | 5.5529 | 5.1081 | +26.61% |
-| o200k_base | 200,019 | 50,971,306 | 4.0751 | 4.0899 | 0.00% |
+| o200k_base (tiktoken) | 200,019 | 50,971,306 | 4.0751 | 4.0899 | 0.00% |
+| Bloom-7b1 | 250,680 | 54,773,073 | 3.7922 | 4.1584 | +7.4% |
 | Qwen2.5-7B-Instruct tokenizer | 151,665 | 62,266,982 | 3.3358 | 3.3236 | −22.16% |
-| Gemini 3.8 Flash | n/a | NOT MEASURED | — | — | — |
+| cl100k_base (tiktoken) | 100,256 | 75,061,973 | 2.7672 | 2.8566 | −47.2% |
+| Mistral-7B-Instruct-v0.2 | 32,000 | 87,276,011 | 2.3800 | 2.4943 | −71.3% |
+| StableLM-base-alpha-3b | 50,277 | 83,207,383 | 2.4963 | 2.6430 | −63.2% |
+| Llama-2-7b (community mirror) | 32,000 | 91,853,794 | 2.2613 | 2.3985 | −80.2% |
+| CodeLlama-7b | 32,016 | 91,853,791 | 2.2613 | 2.3985 | −80.2% |
+| DeepSeek-LLM-7b-base | 100,015 | 93,334,847 | 2.2255 | 2.4470 | −83.1% |
+| Falcon-7b | 65,024 | 103,640,810 | 2.0042 | 2.3126 | −103.3% |
+| GPT-2 (r50k_base) | 50,256 | 105,229,579 | 1.9739 | 2.1406 | −106.4% |
+| DeepSeek-Coder-6.7b-base | 32,022 | 116,855,033 | 1.7775 | 2.1074 | −129.3% |
+| MosaicML MPT | n/a | NOT MEASURED (401/404 on the hub) | — | — | — |
+| Gemini 3.8 Flash | n/a | NOT MEASURED (no API credential) | — | — | — |
+
+**Competitor landscape** (properties from public model cards; only the B/T column measured here):
+
+| Tokenizer | Algorithm | Multilingual & code | License | Vocab | Measured B/T |
+|---|---|---|---|---|---:|
+| o200k_base | byte-level BPE (regex) | Multilingual; code/math emphasis | MIT (tiktoken) | 200,019 | 4.0751 |
+| cl100k_base | byte-level BPE (regex) | Multilingual (narrower) | MIT (tiktoken) | 100,256 | 2.7672 |
+| GPT-2 | byte-level BPE | largely English | MIT (code) | 50,256 | 1.9739 |
+| Llama-2 | SentencePiece BPE, byte fallback | Multilingual (Europe-strong) | Llama 2 Community License | 32,000 | 2.2613 |
+| CodeLlama-7b | byte-level BPE | code (Llama 2 family) | Llama 2 Community License | 32,016 | 2.2613 |
+| Qwen2.5-7B-Instruct | byte-level BPE | Multilingual (29+ languages), code | Apache-2.0 | 151,665 | 3.3358 |
+| Mistral-7B-Instruct-v0.2 | byte-level BPE, byte fallback | Multilingual; code | Apache-2.0 | 32,000 | 2.3800 |
+| Bloom-7b1 | byte-level BPE (BBPE) | ~46 languages | BigScience Open RAIL-M-1.0 | 250,680 | 3.7922 |
+| StableLM-base-alpha-3b | byte-level BPE (GPT-NeoX family) | English + code | CC BY-SA 4.0 | 50,277 | 2.4963 |
+| DeepSeek-LLM-7b-base | byte-level BPE (custom) | English/Chinese focus, code | other (see card) | 100,015 | 2.2255 |
+| DeepSeek-Coder-6.7b-base | byte-level BPE (custom) | code-focused | other (see card) | 32,022 | 1.7775 |
+| Falcon-7b | byte-level BPE | English + European, code | Apache-2.0 | 65,024 | 2.0042 |
+| **NTokenizer v0.3-polished** | byte-level BPE + MathSymbolAware | Multilingual by design (incl. code + CJK) | source MIT/Apache-2.0; model CC BY-SA 4.0 | 262,144 | **5.5542** |
 
 **NTokenizer v0.3-polished wins 10 of 11 categories against o200k_base and against
 Qwen2.5-7B-Instruct** (both: loses only the tiny 0.16 MB `other_languages` bucket);

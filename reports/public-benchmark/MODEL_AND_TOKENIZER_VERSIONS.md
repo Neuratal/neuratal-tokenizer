@@ -36,3 +36,24 @@ Cross-reference checks recorded in this cycle:
 ## Special tokens (NTokenizer models)
 
 `<|bos|> 262137`, `<|eos|> 262138`, `<|pad|> 262139`, `<|unk|> 262140`, `<|system|> 262141`, `<|user|> 262142`, `<|assistant|> 262143`
+
+## Additional candidates measured 2026-11-16 (same benchmark, same raw text)
+
+| Name | Library | Revision | Tokenizer file hash (sha256) | Vocab | Notes |
+|---|---|---|---|---|---|
+| GPT-2 (r50k_base) | tiktoken 0.14.0 | tiktoken built-in rank file | not pinned as a git revision | 50,256 | `allowed_special=set()`; decode not measured |
+| cl100k_base | tiktoken 0.14.0 | tiktoken built-in rank file | not pinned as a git revision | 100,256 | `allowed_special=set()`; decode not measured |
+| Mistral-7B-Instruct-v0.2 | tokenizers 0.23.3 | `63a8b081895390a26e140280378bc85ec8bce07a` (lastModified 2023-12-11) | `tokenizer.json` `11c08db21487c885…` | 32,000 | Apache-2.0; `add_special_tokens=False` |
+| Llama-2-7b (NousResearch mirror) | tokenizers 0.23.3 | `8efe6c9b93655b934e27bd9981e3ec13e55aee9d` | `tokenizer.json` `f7b50bcf6d6672ea…` | 32,000 | Llama 2 Community License (mirror; not an official Meta distribution) |
+| CodeLlama-7b | tokenizers 0.23.3 | `6c284d1468fe6c413cf56183e69b194dcfa27fe6` | `tokenizer.json` `dcb4337ba92f948b…` | 32,016 | Llama 2 Community License |
+| Bloom-7b1 | tokenizers 0.23.3 | `6232703e399354503377bf59dfbb8397fd569e4a` | `tokenizer.json` `3fa39cd4b1500feb…` | 250,680 | BigScience Open RAIL-M-1.0 (the user's table said CC BY-NC-SA; the actual card states `bigscience-bloom-rail-1.0` — measurement only, nothing redistributed) |
+| StableLM-base-alpha-3b | tokenizers 0.23.3 | `819657db42861818efac86e8ca60f673fa912ef8` | `tokenizer.json` `3cf430678137c849…` | 50,277 | CC BY-SA 4.0 (stated on the model card) |
+| deepseek-llm-7b-base | tokenizers 0.23.3 | `7683fea62db869066ddaff6a41d032262c490d4f` | `tokenizer.json` `a08b02921f085480…` | 100,015 | license: other (see the model card) |
+| deepseek-coder-6.7b-base | tokenizers 0.23.3 | `ce2207a8bfef3ee92bd7dd4cc31c52cfa0046912` | `tokenizer.json` `ef48ebdc8546c2d8…` | 32,022 | license: other (see the model card) |
+| Falcon-7b | tokenizers 0.23.3 | `ec89142b67d748a1865ea4451372db8313ada0d8` | `tokenizer.json` `d6c5cdac1421ea99…` | 65,024 | Apache-2.0; `add_special_tokens=False` |
+
+**Not measured / not available:**
+- Gemini 3.8 Flash — no Gemini API credential in this environment (`LLM_API_KEY` is the literal `"local"`); see METHODOLOGY.md.
+- MosaicML MPT — all candidate repositories return 401/404 from the Hugging Face hub API (models appear unavailable or gated); measurement impossible here.
+
+Every per-file result is in `results/`. All measurements used `add_special_tokens=False` (or tiktoken `allowed_special=set()`), raw text only, no chat templates.

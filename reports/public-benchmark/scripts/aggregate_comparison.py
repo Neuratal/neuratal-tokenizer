@@ -25,10 +25,23 @@ def main():
         'v0.3-polished': 'public-benchmark-perfile-v0.3-polished.json',
         'v0.4-fail-cjk8':'public-benchmark-perfile-v0.4-fail.json',
         'v0.4-fail-han4':'public-benchmark-perfile-v0.4-fail-han4.json',
+        'gpt2-r50k':     'tiktoken_r50k_gpt2_perfile.json',
+        'cl100k':        'tiktoken_cl100k_base_perfile.json',
+        'mistral-7b-instruct-v0.2': 'mistral_7b_instruct_v02_perfile.json',
+        'llama2-7b':     'llama2_7b_hf_perfile.json',
+        'codellama-7b':  'codellama_7b_hf_perfile.json',
+        'bloom-7b1':     'bloom_7b1_perfile.json',
+        'stablelm-3b':   'stablelm_base_alpha_3b_perfile.json',
+        'deepseek-llm-7b': 'deepseek_llm_7b_base_perfile.json',
+        'deepseek-coder-6.7b': 'deepseek_coder_6.7b_base_perfile.json',
+        'falcon-7b':     'falcon_7b_perfile.json',
         'o200k':         'o200k_base_perfile.json',
         'qwen2.5-7b-instruct': 'Qwen2_5_instruct_perfile.json',
     }
-    vocab = {'v0.1':262144,'v0.2':262144,'v0.3-original':262144,'v0.3-polished':262144,'v0.4-fail-cjk8':262144,'v0.4-fail-han4':262144,'o200k':200019,'qwen2.5-7b-instruct':151665}
+    vocab = {'v0.1':262144,'v0.2':262144,'v0.3-original':262144,'v0.3-polished':262144,'v0.4-fail-cjk8':262144,'v0.4-fail-han4':262144,
+             'gpt2-r50k':50256,'cl100k':100256,'mistral-7b-instruct-v0.2':32000,'llama2-7b':32000,'codellama-7b':32016,
+             'bloom-7b1':250680,'stablelm-3b':50277,'deepseek-llm-7b':100015,'deepseek-coder-6.7b':32022,'falcon-7b':65024,
+             'o200k':200019,'qwen2.5-7b-instruct':151665}
 
     data = {}
     for k, f in mods.items():

@@ -7,19 +7,52 @@ SHA-256 `002a8224671cd281312e059af85dad24c269e7a3945e55724d476e3e255103c8`).
 
 **Bold** = higher B/T (fewer tokens per input byte) than the comparator. The **Best B/T** column shows the highest value in the row (bolded). NTokenizer v0.3-polished is bolded only where it strictly beats the comparator — not by default. B/T measures compression efficiency, not language-model quality.
 
-## Table A — Standardized comparison (all re-evaluated on identical files today)
+## Table A — Standardized comparison (all re-evaluated on identical files today, 2026-11-16)
 
-| Tokenizer (exact reference) | Vocabulary | Total tokens | Overall B/T | Equal-category B/T | Token reduction vs o200k | Token reduction vs Qwen2.5-7B |
-|---|---:|---:|---:|---:|---:|---:|
-| NTokenizer v0.1 | 262,144 | 65,573,261 | 3.1676 | 3.1203 | −28.65% | −5.31% |
-| NTokenizer v0.2 | 262,144 | 42,140,674 | 4.9290 | 4.6855 | +17.32% | +32.32% |
-| NTokenizer v0.3-original (pre-polish source) | 262,144 | 37,397,108 | 5.5543 | 5.1057 | +26.63% | +39.94% |
-| **NTokenizer v0.3-polished (official release)** | 262,144 | **37,397,319** | **5.5542** | **5.1056** | **+26.63%** | **+39.94%** |
-| NTokenizer v0.4-fail (CJK8) | 262,144 | 37,418,652 | 5.5511 | 5.1031 | +26.59% | +39.91% |
-| NTokenizer v0.4-fail (Han4 arm) | 262,144 | 37,406,269 | 5.5529 | 5.1081 | +26.61% | +39.93% |
-| o200k_base | 200,019 | 50,971,306 | 4.0751 | 4.0899 | 0.00% | +18.14% |
-| Qwen2.5-7B-Instruct tokenizer | 151,665 | 62,266,982 | 3.3358 | 3.3236 | −22.16% | 0.00% |
-| Gemini 3.8 Flash | n/a | NOT MEASURED | n/a | n/a | — | — |
+| Tokenizer (exact reference) | Vocabulary | Total tokens | Overall B/T | Equal-category B/T | Token reduction vs o200k |
+|---|---:|---:|---:|---:|---:|
+| NTokenizer v0.1 | 262,144 | 65,573,261 | 3.1676 | 3.1203 | −28.65% |
+| NTokenizer v0.2 | 262,144 | 42,140,674 | 4.9290 | 4.6855 | +17.32% |
+| NTokenizer v0.3-original (pre-polish source) | 262,144 | 37,397,108 | 5.5543 | 5.1057 | +26.63% |
+| **NTokenizer v0.3-polished (official release)** | 262,144 | **37,397,319** | **5.5542** | **5.1056** | **+26.63%** |
+| NTokenizer v0.4-fail (CJK8) | 262,144 | 37,418,652 | 5.5511 | 5.1031 | +26.59% |
+| NTokenizer v0.4-fail (Han4 arm) | 262,144 | 37,406,269 | 5.5529 | 5.1081 | +26.61% |
+| o200k_base (tiktoken 0.14.0) | 200,019 | 50,971,306 | 4.0751 | 4.0899 | 0.00% |
+| Bloom-7b1 (bigscience) | 250,680 | 54,773,073 | 3.7922 | 4.1584 | +7.4% |
+| Qwen2.5-7B-Instruct tokenizer | 151,665 | 62,266,982 | 3.3358 | 3.3236 | −22.16% |
+| cl100k_base (tiktoken 0.14.0) | 100,256 | 75,061,973 | 2.7672 | 2.8566 | −47.2% |
+| Mistral-7B-Instruct-v0.2 | 32,000 | 87,276,011 | 2.3800 | 2.4943 | −71.3% |
+| StableLM-base-alpha-3b | 50,277 | 83,207,383 | 2.4963 | 2.6430 | −63.2% |
+| Llama-2-7b (NousResearch mirror) | 32,000 | 91,853,794 | 2.2613 | 2.3985 | −80.2% |
+| CodeLlama-7b | 32,016 | 91,853,791 | 2.2613 | 2.3985 | −80.2% |
+| DeepSeek-LLM-7b-base | 100,015 | 93,334,847 | 2.2255 | 2.4470 | −83.1% |
+| Falcon-7b (tiiuae) | 65,024 | 103,640,810 | 2.0042 | 2.3126 | −103.3% |
+| GPT-2 (r50k_base) | 50,256 | 105,229,579 | 1.9739 | 2.1406 | −106.4% |
+| DeepSeek-Coder-6.7b-base | 32,022 | 116,855,033 | 1.7775 | 2.1074 | −129.3% |
+| MosaicML MPT | n/a | NOT MEASURED (repositories 401/404 on the HF hub) | n/a | n/a | — |
+| Gemini 3.8 Flash | n/a | NOT MEASURED (no credential) | n/a | n/a | — |
+
+## Table A2 — Competitor landscape (properties + measured compression)
+
+Properties are quoted from the public model cards; only the B/T column was measured here. Measurement policy identical to Table A (raw text, no chat templates, `add_special_tokens=False` / `allowed_special=set()`).
+
+| Tokenizer | Algorithm | Multilingual & code | License | Vocab | Measured B/T |
+|---|---|---|---|---|---:|
+| o200k_base | byte-level BPE (regex pre-tokenizer) | Multilingual (incl. code/math emphasis) | MIT (tiktoken) | 200,019 | 4.0751 |
+| cl100k_base | byte-level BPE | Multilingual (narrower than o200k) | MIT (tiktoken) | 100,256 | 2.7672 |
+| GPT-2 | byte-level BPE | largely English | MIT (code) | 50,256 | 1.9739 |
+| Llama-2 | SentencePiece BPE, byte fallback | Multilingual (strong on European languages) | Llama 2 Community License | 32,000 | 2.2613 |
+| CodeLlama-7b | SentencePiece/byte-level BPE, byte fallback | Code-optimized (Llama 2 family) | Llama 2 Community License | 32,016 | 2.2613 |
+| Qwen2.5-7B-Instruct | byte-level BPE (Qwen2 tokenizer family) | Multilingual (29+ languages), code-capable | Apache-2.0 | 151,665 | 3.3358 |
+| Mistral-7B-Instruct-v0.2 | byte-level BPE with byte fallback | Multilingual; code | Apache-2.0 | 32,000 | 2.3800 |
+| Bloom-7b1 | byte-level BPE (BBPE) | ~46 languages, multilingual focus | BigScience Open RAIL-M-1.0 | 250,680 | 3.7922 |
+| StableLM-base-alpha-3b | byte-level BPE (GPT-NeoX family) | English + code | CC BY-SA 4.0 | 50,277 | 2.4963 |
+| DeepSeek-LLM-7b-base | byte-level BPE (deepseek custom) | Multilingual (English/Chinese focus), code | other (see model card) | 100,015 | 2.2255 |
+| DeepSeek-Coder-6.7b-base | byte-level BPE (deepseek custom) | code-focused | other (see model card) | 32,022 | 1.7775 |
+| Falcon-7b | byte-level BPE (falcon family) | English + European languages; code | Apache-2.0 | 65,024 | 2.0042 |
+| MosaicML MPT | — | — | — | — | NOT MEASURED (401/404 on the hub) |
+| Gemini 3.8 Flash | — (vendor API tokenizer) | — | — | — | NOT MEASURED (no credential) |
+| **NTokenizer v0.3-polished** | byte-level BPE + MathSymbolAware pre-tokenizer | Multilingual by design (technical + code + CJK included) | source MIT/Apache-2.0; model CC BY-SA 4.0 | 262,144 | **5.5542** |
 
 Table notes:
 
