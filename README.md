@@ -360,3 +360,7 @@ You should try NTokenizer on your own data first — that is the only honest ans
 ---
 
 *Neuratal — independent AI research and software development. Founder: Rüzgar Erdem.*
+
+---
+
+🌐 **Official website:** [neuratal.com](https://neuratal.com) — the Neuratal homepage.
